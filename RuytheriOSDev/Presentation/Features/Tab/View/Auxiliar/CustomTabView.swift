@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomTabView: View {
-    @Binding var viewModel: ParentViewModel
+    @Binding var viewModel: BaseTabViewModel
 
     var body: some View {
         GeometryReader { geometry in
@@ -74,5 +74,5 @@ struct CustomTabView: View {
 }
 
 #Preview {
-    CustomTabView(viewModel: .constant(ParentViewModel()))
+    CustomTabView(viewModel: .constant(BaseTabViewModel()))
 }

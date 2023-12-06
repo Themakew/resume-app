@@ -15,7 +15,7 @@ import SwiftUI
         windowScene = scene as? UIWindowScene
     }
 
-    func addTabView(_ viewModel: Binding<ParentViewModel>) {
+    func addTabView(_ viewModel: Binding<BaseTabViewModel>) {
         guard let scene = windowScene else {
             return
         }

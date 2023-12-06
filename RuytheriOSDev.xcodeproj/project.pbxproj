@@ -17,13 +17,24 @@
 		569A077E2B2003E7004AA63A /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 569A077C2B2003E7004AA63A /* click.wav */; };
 		569A077F2B2003E7004AA63A /* pop-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 569A077D2B2003E7004AA63A /* pop-up.wav */; };
 		569A07812B2004BD004AA63A /* about-me.json in Resources */ = {isa = PBXBuildFile; fileRef = 569A07802B2004BD004AA63A /* about-me.json */; };
-		569A078B2B2005F2004AA63A /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A078A2B2005F2004AA63A /* ParentView.swift */; };
-		569A078D2B20061D004AA63A /* ParentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A078C2B20061D004AA63A /* ParentViewModel.swift */; };
+		569A078B2B2005F2004AA63A /* BaseTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A078A2B2005F2004AA63A /* BaseTabView.swift */; };
+		569A078D2B20061D004AA63A /* BaseTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A078C2B20061D004AA63A /* BaseTabViewModel.swift */; };
 		569A07912B200917004AA63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07902B200917004AA63A /* AppDelegate.swift */; };
 		569A07932B200924004AA63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07922B200924004AA63A /* SceneDelegate.swift */; };
 		569A07962B2009A3004AA63A /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07952B2009A3004AA63A /* CustomTabView.swift */; };
 		569A079A2B201624004AA63A /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07992B201624004AA63A /* View+Extension.swift */; };
 		569A079C2B20163D004AA63A /* TabView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A079B2B20163D004AA63A /* TabView+Extension.swift */; };
+		569A07AC2B202924004AA63A /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569A07A42B202924004AA63A /* Nunito-Bold.ttf */; };
+		569A07AD2B202924004AA63A /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569A07A52B202924004AA63A /* Nunito-ExtraLight.ttf */; };
+		569A07AE2B202924004AA63A /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569A07A62B202924004AA63A /* Nunito-SemiBold.ttf */; };
+		569A07AF2B202924004AA63A /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569A07A72B202924004AA63A /* Nunito-Medium.ttf */; };
+		569A07B02B202924004AA63A /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569A07A82B202924004AA63A /* Nunito-Regular.ttf */; };
+		569A07B12B202924004AA63A /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569A07A92B202924004AA63A /* Nunito-Light.ttf */; };
+		569A07B22B202924004AA63A /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569A07AA2B202924004AA63A /* Nunito-ExtraBold.ttf */; };
+		569A07B32B202924004AA63A /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569A07AB2B202924004AA63A /* Nunito-Black.ttf */; };
+		569A07B62B20294E004AA63A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07B52B20294E004AA63A /* Font.swift */; };
+		569A07BA2B202CE5004AA63A /* AssetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07B92B202CE5004AA63A /* AssetColor.swift */; };
+		569A07BE2B202F69004AA63A /* ToolbarCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07BD2B202F69004AA63A /* ToolbarCustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,13 +68,25 @@
 		569A077C2B2003E7004AA63A /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		569A077D2B2003E7004AA63A /* pop-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "pop-up.wav"; sourceTree = "<group>"; };
 		569A07802B2004BD004AA63A /* about-me.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "about-me.json"; sourceTree = "<group>"; };
-		569A078A2B2005F2004AA63A /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
-		569A078C2B20061D004AA63A /* ParentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewModel.swift; sourceTree = "<group>"; };
+		569A078A2B2005F2004AA63A /* BaseTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabView.swift; sourceTree = "<group>"; };
+		569A078C2B20061D004AA63A /* BaseTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabViewModel.swift; sourceTree = "<group>"; };
 		569A07902B200917004AA63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		569A07922B200924004AA63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		569A07952B2009A3004AA63A /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		569A07992B201624004AA63A /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		569A079B2B20163D004AA63A /* TabView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabView+Extension.swift"; sourceTree = "<group>"; };
+		569A07A42B202924004AA63A /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		569A07A52B202924004AA63A /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		569A07A62B202924004AA63A /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		569A07A72B202924004AA63A /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		569A07A82B202924004AA63A /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		569A07A92B202924004AA63A /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		569A07AA2B202924004AA63A /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		569A07AB2B202924004AA63A /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		569A07B52B20294E004AA63A /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		569A07B72B202969004AA63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		569A07B92B202CE5004AA63A /* AssetColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetColor.swift; sourceTree = "<group>"; };
+		569A07BD2B202F69004AA63A /* ToolbarCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarCustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +137,7 @@
 		569A074D2B1FD23D004AA63A /* RuytheriOSDev */ = {
 			isa = PBXGroup;
 			children = (
+				569A07B72B202969004AA63A /* Info.plist */,
 				569A07782B200384004AA63A /* App */,
 				569A07822B2004E1004AA63A /* Infrastructure */,
 				569A07832B200514004AA63A /* Data */,
@@ -161,8 +185,9 @@
 		569A07792B200395004AA63A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				569A07522B1FD23E004AA63A /* Assets.xcassets */,
-				569A077B2B2003C9004AA63A /* Sounds Effects */,
+				569A07A32B202897004AA63A /* Assets */,
+				569A077B2B2003C9004AA63A /* SoundsEffects */,
+				569A07A22B20287D004AA63A /* CustomFonts */,
 				569A077A2B2003B2004AA63A /* JSON */,
 			);
 			path = Resources;
@@ -176,13 +201,13 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
-		569A077B2B2003C9004AA63A /* Sounds Effects */ = {
+		569A077B2B2003C9004AA63A /* SoundsEffects */ = {
 			isa = PBXGroup;
 			children = (
 				569A077C2B2003E7004AA63A /* click.wav */,
 				569A077D2B2003E7004AA63A /* pop-up.wav */,
 			);
-			path = "Sounds Effects";
+			path = SoundsEffects;
 			sourceTree = "<group>";
 		};
 		569A07822B2004E1004AA63A /* Infrastructure */ = {
@@ -244,6 +269,8 @@
 		569A07892B20058C004AA63A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				569A07BB2B202F3A004AA63A /* UI */,
+				569A07B42B20293C004AA63A /* Enum */,
 				569A07982B201614004AA63A /* Extensions */,
 			);
 			path = Common;
@@ -279,7 +306,7 @@
 		569A07A02B202241004AA63A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				569A078C2B20061D004AA63A /* ParentViewModel.swift */,
+				569A078C2B20061D004AA63A /* BaseTabViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -287,10 +314,66 @@
 		569A07A12B202247004AA63A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				569A07952B2009A3004AA63A /* CustomTabView.swift */,
-				569A078A2B2005F2004AA63A /* ParentView.swift */,
+				569A078A2B2005F2004AA63A /* BaseTabView.swift */,
+				569A07B82B202A9A004AA63A /* Auxiliar */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		569A07A22B20287D004AA63A /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				569A07AB2B202924004AA63A /* Nunito-Black.ttf */,
+				569A07A42B202924004AA63A /* Nunito-Bold.ttf */,
+				569A07AA2B202924004AA63A /* Nunito-ExtraBold.ttf */,
+				569A07A52B202924004AA63A /* Nunito-ExtraLight.ttf */,
+				569A07A92B202924004AA63A /* Nunito-Light.ttf */,
+				569A07A72B202924004AA63A /* Nunito-Medium.ttf */,
+				569A07A82B202924004AA63A /* Nunito-Regular.ttf */,
+				569A07A62B202924004AA63A /* Nunito-SemiBold.ttf */,
+			);
+			path = CustomFonts;
+			sourceTree = "<group>";
+		};
+		569A07A32B202897004AA63A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				569A07522B1FD23E004AA63A /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		569A07B42B20293C004AA63A /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				569A07B52B20294E004AA63A /* Font.swift */,
+				569A07B92B202CE5004AA63A /* AssetColor.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		569A07B82B202A9A004AA63A /* Auxiliar */ = {
+			isa = PBXGroup;
+			children = (
+				569A07952B2009A3004AA63A /* CustomTabView.swift */,
+			);
+			path = Auxiliar;
+			sourceTree = "<group>";
+		};
+		569A07BB2B202F3A004AA63A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				569A07BC2B202F3E004AA63A /* Button */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		569A07BC2B202F3E004AA63A /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				569A07BD2B202F69004AA63A /* ToolbarCustomButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,11 +480,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569A07B02B202924004AA63A /* Nunito-Regular.ttf in Resources */,
+				569A07AE2B202924004AA63A /* Nunito-SemiBold.ttf in Resources */,
 				569A07812B2004BD004AA63A /* about-me.json in Resources */,
+				569A07B22B202924004AA63A /* Nunito-ExtraBold.ttf in Resources */,
+				569A07AD2B202924004AA63A /* Nunito-ExtraLight.ttf in Resources */,
+				569A07B12B202924004AA63A /* Nunito-Light.ttf in Resources */,
 				569A077E2B2003E7004AA63A /* click.wav in Resources */,
 				569A07562B1FD23E004AA63A /* Preview Assets.xcassets in Resources */,
 				569A07532B1FD23E004AA63A /* Assets.xcassets in Resources */,
+				569A07B32B202924004AA63A /* Nunito-Black.ttf in Resources */,
+				569A07AC2B202924004AA63A /* Nunito-Bold.ttf in Resources */,
 				569A077F2B2003E7004AA63A /* pop-up.wav in Resources */,
+				569A07AF2B202924004AA63A /* Nunito-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,14 +517,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				569A078D2B20061D004AA63A /* ParentViewModel.swift in Sources */,
+				569A078D2B20061D004AA63A /* BaseTabViewModel.swift in Sources */,
 				569A07512B1FD23D004AA63A /* ContentView.swift in Sources */,
+				569A07BA2B202CE5004AA63A /* AssetColor.swift in Sources */,
+				569A07B62B20294E004AA63A /* Font.swift in Sources */,
 				569A079C2B20163D004AA63A /* TabView+Extension.swift in Sources */,
 				569A079A2B201624004AA63A /* View+Extension.swift in Sources */,
-				569A078B2B2005F2004AA63A /* ParentView.swift in Sources */,
+				569A078B2B2005F2004AA63A /* BaseTabView.swift in Sources */,
 				569A07912B200917004AA63A /* AppDelegate.swift in Sources */,
 				569A074F2B1FD23D004AA63A /* RuytheriOSDevApp.swift in Sources */,
 				569A07932B200924004AA63A /* SceneDelegate.swift in Sources */,
+				569A07BE2B202F69004AA63A /* ToolbarCustomButton.swift in Sources */,
 				569A07962B2009A3004AA63A /* CustomTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +695,7 @@
 				DEVELOPMENT_TEAM = CSD6NA874L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RuytheriOSDev/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RuytheriOSDev;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -614,7 +709,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.themakew.RuytheriOSDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -634,6 +729,7 @@
 				DEVELOPMENT_TEAM = CSD6NA874L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RuytheriOSDev/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RuytheriOSDev;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -647,7 +743,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.themakew.RuytheriOSDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;

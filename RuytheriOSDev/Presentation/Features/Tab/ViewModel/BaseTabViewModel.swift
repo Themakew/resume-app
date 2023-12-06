@@ -43,12 +43,28 @@ enum Tab: String, CaseIterable {
             return "heart"
         }
     }
+
+    var backgroundViewTitle: String {
+        switch self {
+        case .aboutMe:
+            return "About Me 🤔"
+        case .careerGoals:
+            return "Dreams to Reality 🚀"
+        case .education:
+            return "Scroll up to discover 📚"
+        case . experience:
+            return "Professional Path 🧑🏾‍💻"
+        case .passions:
+            return "Versions of me 😄"
+        }
+    }
 }
 
-protocol ParentViewModelProtocol {
+protocol BaseTabViewModelProtocol {
     var activeTab: Tab { get set }
 }
 
-@Observable final class ParentViewModel: ParentViewModelProtocol {
+@Observable final class BaseTabViewModel: BaseTabViewModelProtocol {
+    let customToolbarTitle = "Hire me"
     var activeTab: Tab = .aboutMe
 }

@@ -11,11 +11,10 @@ import SwiftUI
 struct RuytheriOSDevApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var delegate
 
-    let parentViewModel = ParentViewModel()
-
+    let parentViewModel = BaseTabViewModel()
     var body: some Scene {
         WindowGroup {
-            ParentView(viewModel: parentViewModel)
+            BaseTabView(viewModel: parentViewModel)
         }
     }
 }

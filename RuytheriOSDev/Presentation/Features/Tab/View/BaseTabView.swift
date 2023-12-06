@@ -1,5 +1,5 @@
 //
-//  ParentView.swift
+//  BaseTabView.swift
 //  RuytheriOSDev
 //
 //  Created by Ruyther Costa on 2023-12-05.
@@ -7,15 +7,24 @@
 
 import SwiftUI
 
-struct ParentView: View {
-    @State var viewModel: ParentViewModel
+struct BaseTabView: View {
+    @State var viewModel: BaseTabViewModel
 
     @Environment(SceneDelegate.self) private var sceneDelegate
 
     var body: some View {
         TabView(selection: $viewModel.activeTab) {
             NavigationStack {
-                Text(Tab.aboutMe.title)
+                GeometryReader { geometry in
+                    VStack {
+                        Image("picture")
+                            .resizable() // This makes the image resizable
+                            .scaledToFill() // This is similar to UIKit's .scaleAspectFill
+                            .frame(width: geometry.size.width, height: geometry.size.height)
+                            .clipped() // This ensures the image does not exceed its frame
+                            .ignoresSafeArea()
+                    }
+                }
             }
             .tag(Tab.aboutMe)
             .hideNativeTabBar()
@@ -68,15 +77,16 @@ struct ParentView: View {
                 .scrollContentBackground(.hidden)
                 .toolbar(content: {
                     ToolbarItem(placement: .topBarLeading) {
-                        Text(viewModel.activeTab.title)
-                            .font(.title.bold())
+                        Text(viewModel.activeTab.backgroundViewTitle)
+                            .foregroundStyle(AssetColor.blackSecondary.color)
+                            .font(NunitoFont.black.size(20))
                     }
 
                     if viewModel.activeTab == .aboutMe {
                         ToolbarItem(placement: .topBarTrailing) {
-                            Button(action: {}, label: {
-                                Image(systemName: "plus")
-                            })
+                            ToolbarCustomButton(title: viewModel.customToolbarTitle) {
+
+                            }
                         }
                     }
                 })
@@ -116,5 +126,5 @@ struct ParentView: View {
 }
 
 #Preview {
-    ParentView(viewModel: ParentViewModel())
+    BaseTabView(viewModel: BaseTabViewModel())
 }
