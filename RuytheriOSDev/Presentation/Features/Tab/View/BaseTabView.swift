@@ -9,20 +9,38 @@ import SwiftUI
 
 struct BaseTabView: View {
     @State var viewModel: BaseTabViewModel
+    @State var sheetYOffsetValue: CGFloat = 0
 
     @Environment(SceneDelegate.self) private var sceneDelegate
+
+    private let maximumSheetYOffsetValue: CGFloat = 130
 
     var body: some View {
         TabView(selection: $viewModel.activeTab) {
             NavigationStack {
                 GeometryReader { geometry in
+                    Image("picture")
+                        .resizable() // This makes the image resizable
+                        .scaledToFill() // This is similar to UIKit's .scaleAspectFill
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .clipped() // This ensures the image does not exceed its frame
+                        .ignoresSafeArea()
+
                     VStack {
-                        Image("picture")
-                            .resizable() // This makes the image resizable
-                            .scaledToFill() // This is similar to UIKit's .scaleAspectFill
-                            .frame(width: geometry.size.width, height: geometry.size.height)
-                            .clipped() // This ensures the image does not exceed its frame
-                            .ignoresSafeArea()
+                        HStack {
+                            Spacer()
+                            ToolbarCustomButton(
+                                title: viewModel.customToolbarTitle,
+                                backgroundColor: .white,
+                                foregroundColor: AssetColor.orangeTitle.color
+                            ) {
+
+                            }
+                            .opacity(sheetYOffsetValue < maximumSheetYOffsetValue ? 0 : 1)
+                            .animation(.easeInOut, value: sheetYOffsetValue)
+                        }
+                        .padding()
+                        Spacer()
                     }
                 }
             }
@@ -53,7 +71,7 @@ struct BaseTabView: View {
             .tag(Tab.passions)
             .hideNativeTabBar()
         }
-        .tabSheet {
+        .tabSheet(sheetYOffsetValue: $sheetYOffsetValue) {
             NavigationStack {
                 ScrollView {
                     VStack(spacing: 15) {
@@ -82,12 +100,12 @@ struct BaseTabView: View {
                             .font(NunitoFont.black.size(20))
                     }
 
-                    if viewModel.activeTab == .aboutMe {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            ToolbarCustomButton(title: viewModel.customToolbarTitle) {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        ToolbarCustomButton(title: viewModel.customToolbarTitle) {
 
-                            }
                         }
+                        .opacity(sheetYOffsetValue > maximumSheetYOffsetValue ? 0 : 1)
+                        .animation(.easeInOut, value: sheetYOffsetValue)
                     }
                 })
             }

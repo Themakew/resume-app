@@ -14,7 +14,6 @@ struct CustomTabView: View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
                 Divider()
-
                 ZStack(alignment: .topLeading) {
                     HStack(spacing: 0) {
                         ForEach(Tab.allCases, id: \.self) { tab in
@@ -25,12 +24,12 @@ struct CustomTabView: View {
                                     Spacer()
                                     Image(tab.iconTitle)
                                         .renderingMode(.template)
-                                        .foregroundColor(viewModel.activeTab == tab ? .orange : .black)
-                                        .font(.title2)
+                                        .foregroundColor(viewModel.activeTab == tab ? AssetColor.orangeIcon.color : .black)
+                                        .frame(width: 20, height: 20)
 
                                     Text(tab.title)
-                                        .font(.caption)
-                                        .foregroundColor(viewModel.activeTab == tab ? .orange : .black)
+                                        .font(NunitoFont.regular.size(11))
+                                        .foregroundColor(viewModel.activeTab == tab ? AssetColor.orangeIcon.color : .black)
                                     Spacer()
                                 }
                                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -39,7 +38,6 @@ struct CustomTabView: View {
                             .buttonStyle(PlainButtonStyle())
                         }
                     }
-
                     Rectangle()
                         .fill(Color.orange)
                         .frame(width: highlightLineWidth(geometry: geometry), height: 2)
