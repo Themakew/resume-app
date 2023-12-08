@@ -116,9 +116,11 @@ extension BaseTabView {
         }
 
         ToolbarItem(placement: .topBarTrailing) {
-            ToolbarCustomButton(title: viewModel.customToolbarTitle) {}
-                .opacity(sheetYOffsetValue > maximumSheetYOffsetValue ? 0 : 1)
-                .animation(.easeInOut, value: sheetYOffsetValue)
+            ToolbarCustomButton(title: viewModel.customToolbarTitle) {
+                // TODO
+            }
+            .opacity(sheetYOffsetValue > maximumSheetYOffsetValue ? 0 : 1)
+            .animation(.easeInOut, value: sheetYOffsetValue)
         }
     }
 }
