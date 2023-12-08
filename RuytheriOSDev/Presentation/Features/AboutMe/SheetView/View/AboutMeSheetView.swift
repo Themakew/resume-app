@@ -24,8 +24,8 @@ struct AboutMeSheetView<ViewModel: AboutMeSheetViewModelProtocol>: View {
                     BubbleRowView(bubleData: bubbleData)
                 case let .language(languageList):
                     LanguageRowView(languageData: languageList)
-                case .description(let description):
-                    Text(description.title)
+                case let .location(locationData):
+                    LocationRowView(locationData: locationData)
                 }
             }
         }

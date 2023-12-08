@@ -19,7 +19,7 @@ protocol AboutMeSheetViewModelProtocol {
     enum ListItem: Hashable {
         case bubble(BubbleData)
         case language(LanguageData)
-        case description(BubbleData)
+        case location(LocationData)
     }
 
     struct BubbleData: Hashable {
@@ -33,6 +33,11 @@ protocol AboutMeSheetViewModelProtocol {
         let firstLanguageValue: Double
         let secondLanguageTitle: String
         let secondLanguageValue: Double
+    }
+
+    struct LocationData: Hashable {
+        let title: String
+        let location: String
     }
 
     func fetchData() {
@@ -57,6 +62,9 @@ protocol AboutMeSheetViewModelProtocol {
                     secondLanguageTitle: "Portuguese",
                     secondLanguageValue: 1.0
                 )
+            ),
+            .location(
+                LocationData(title: "Where do I live?", location: "Calgary, Alberta")
             )
         ]
     }

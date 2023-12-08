@@ -11,6 +11,7 @@
 		566A4D5D2B20F7CE00008EEE /* AboutMeBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */; };
 		566A4D632B21046400008EEE /* AboutMeSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D622B21046400008EEE /* AboutMeSheetViewModel.swift */; };
 		566A4D652B21046E00008EEE /* AboutMeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D642B21046E00008EEE /* AboutMeSheetView.swift */; };
+		5693092C2B238BAA00C84DE8 /* LocationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5693092B2B238BAA00C84DE8 /* LocationRowView.swift */; };
 		569A074F2B1FD23D004AA63A /* RuytheriOSDevApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A074E2B1FD23D004AA63A /* RuytheriOSDevApp.swift */; };
 		569A07512B1FD23D004AA63A /* AboutMeBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07502B1FD23D004AA63A /* AboutMeBaseView.swift */; };
 		569A07532B1FD23E004AA63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569A07522B1FD23E004AA63A /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeBaseViewModel.swift; sourceTree = "<group>"; };
 		566A4D622B21046400008EEE /* AboutMeSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeSheetViewModel.swift; sourceTree = "<group>"; };
 		566A4D642B21046E00008EEE /* AboutMeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeSheetView.swift; sourceTree = "<group>"; };
+		5693092B2B238BAA00C84DE8 /* LocationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRowView.swift; sourceTree = "<group>"; };
 		569A074B2B1FD23D004AA63A /* RuytheriOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuytheriOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		569A074E2B1FD23D004AA63A /* RuytheriOSDevApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuytheriOSDevApp.swift; sourceTree = "<group>"; };
 		569A07502B1FD23D004AA63A /* AboutMeBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeBaseView.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 			children = (
 				56E575702B224E130098C9A0 /* BubbleRowView.swift */,
 				56E575722B224F420098C9A0 /* LanguageRowView.swift */,
+				5693092B2B238BAA00C84DE8 /* LocationRowView.swift */,
 			);
 			path = Rows;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				566A4D5D2B20F7CE00008EEE /* AboutMeBaseViewModel.swift in Sources */,
 				56E575712B224E130098C9A0 /* BubbleRowView.swift in Sources */,
 				569A079A2B201624004AA63A /* View+Extension.swift in Sources */,
+				5693092C2B238BAA00C84DE8 /* LocationRowView.swift in Sources */,
 				569A078B2B2005F2004AA63A /* BaseTabView.swift in Sources */,
 				569A07912B200917004AA63A /* AppDelegate.swift in Sources */,
 				569A074F2B1FD23D004AA63A /* RuytheriOSDevApp.swift in Sources */,
