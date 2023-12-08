@@ -62,9 +62,29 @@ enum Tab: String, CaseIterable {
 
 protocol BaseTabViewModelProtocol {
     var activeTab: Tab { get set }
+    var selectedDetent: PresentationDetent { get set }
+
+    func updateSheetDetentStatus()
 }
 
 @Observable final class BaseTabViewModel: BaseTabViewModelProtocol {
     let customToolbarTitle = "Hire me"
+
     var activeTab: Tab = .aboutMe
+    var selectedDetent = PresentationDetent.height(100)
+
+    private var lastActiveTab: Tab = .aboutMe
+    private var sheetStatusByTab: [Tab:PresentationDetent] = [
+        .aboutMe: .height(100), .careerGoals: .height(100), .education: .height(100), .experience: .height(100), .passions: .height(100)
+    ]
+
+    func updateSheetDetentStatus() {
+        sheetStatusByTab[lastActiveTab] = selectedDetent
+
+        if let detent = sheetStatusByTab[activeTab] {
+            selectedDetent = detent
+        }
+
+        lastActiveTab = activeTab
+    }
 }

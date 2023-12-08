@@ -11,6 +11,7 @@ extension TabView {
     @ViewBuilder
     func tabSheet<SheetContent: View>(
         sheetYOffsetValue: Binding<CGFloat>,
+        selectedDetent: Binding<PresentationDetent>,
         initialHeight: CGFloat = 100,
         sheetCornerRadius: CGFloat = 20,
         @ViewBuilder content: @escaping () -> SheetContent
@@ -18,6 +19,7 @@ extension TabView {
         self.modifier(
             BottomSheetModifier(
                 sheetYOffsetValue: sheetYOffsetValue,
+                selectedDetent: selectedDetent,
                 initialHeight: initialHeight,
                 sheetCornerRadius: sheetCornerRadius,
                 sheetView: content()
@@ -28,6 +30,7 @@ extension TabView {
 
 fileprivate struct BottomSheetModifier<SheetContent: View>: ViewModifier {
     @Binding var sheetYOffsetValue: CGFloat
+    @Binding var selectedDetent: PresentationDetent
 
     @State private var showSheet = true
 
@@ -45,7 +48,7 @@ fileprivate struct BottomSheetModifier<SheetContent: View>: ViewModifier {
                             sheetYOffsetValue = newValue
                         }
                 }
-                .presentationDetents([.height(initialHeight), .fraction(0.99)])
+                .presentationDetents([.height(initialHeight), .fraction(0.99)], selection: $selectedDetent)
                 .presentationCornerRadius(sheetCornerRadius)
                 .presentationBackgroundInteraction(.enabled(upThrough: .medium))
                 .presentationBackground(.regularMaterial)

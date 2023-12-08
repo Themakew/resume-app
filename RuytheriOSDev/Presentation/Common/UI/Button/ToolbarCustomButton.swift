@@ -11,7 +11,7 @@ struct ToolbarCustomButton: View {
     @State private var scale: CGFloat = 1.0
 
     var title: String = ""
-    var backgroundColor: Color = AssetColor.orangeTitle.color
+    var backgroundColor: Color = AssetColor.orangeButton.color
     var foregroundColor: Color = .white
     var fontName: String = NunitoFont.black.rawValue
     var fontSize: CGFloat = 18

@@ -11,7 +11,7 @@ struct BaseTabView: View {
     // MARK: - SwiftUI Binders
 
     @State var viewModel: BaseTabViewModel
-    @State var sheetYOffsetValue: CGFloat = 0
+    @State var sheetYOffsetValue: CGFloat = 131
 
     @Environment(SceneDelegate.self) private var sceneDelegate
 
@@ -57,11 +57,14 @@ struct BaseTabView: View {
             .tag(Tab.passions)
             .hideNativeTabBar()
         }
-        .tabSheet(sheetYOffsetValue: $sheetYOffsetValue) {
+        .tabSheet(sheetYOffsetValue: $sheetYOffsetValue, selectedDetent: $viewModel.selectedDetent) {
             sheetView
         }
         .onAppear {
             setupTabWindow()
+        }
+        .onChange(of: viewModel.activeTab) { _, _ in
+            viewModel.updateSheetDetentStatus()
         }
     }
 
@@ -120,7 +123,7 @@ extension BaseTabView {
                 // TODO
             }
             .opacity(sheetYOffsetValue > maximumSheetYOffsetValue ? 0 : 1)
-            .animation(.easeInOut, value: sheetYOffsetValue)
+            .animation(sheetYOffsetValue > maximumSheetYOffsetValue ? nil : .easeInOut , value: sheetYOffsetValue > maximumSheetYOffsetValue)
         }
     }
 }

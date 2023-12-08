@@ -45,13 +45,13 @@ protocol AboutMeSheetViewModelProtocol {
             .bubble(
                 BubbleData(
                     title: "Who am I?",
-                    description: "Brazilian tech enthusiast, embracing challenges, project growth, and human connections. Passionate about learning, especially in tech and aviation realms. 👨🏾‍💻❤️"
+                    description: "Brazilian and future Canadian deeply passionate about technology and its transformative power. Passionate about learning, especially in tech and music. 👨🏾‍💻❤️🥁"
                 )
             ),
             .bubble(
                 BubbleData(
                     title: "Who am I looking for?",
-                    description: "Eager for an iOS Developer role, bringing energy to teams, diving into exciting projects, and tackling career challenges head-on. Can't wait to make a mark!📱💡"
+                    description: "I am looking for an iOS Developer position on exciting projects that will provide challenges and user-centric solutions. I can't wait to create something that will have an impact on people's lives! 📱⌚️"
                 )
             ),
             .language(

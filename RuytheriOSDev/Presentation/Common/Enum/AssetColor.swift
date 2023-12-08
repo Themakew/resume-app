@@ -11,6 +11,7 @@ enum AssetColor: String {
     case blackLabels = "BlackLabels"
     case blackSecondary = "BlackSecondary"
     case grayLabels = "GrayLabels"
+    case orangeButton = "OrangeButton"
     case orangeIcon = "OrangeIcon"
     case orangeTitle = "OrangeTitle"
     case whiteBackground = "WhiteBackground"

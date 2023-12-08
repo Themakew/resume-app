@@ -27,6 +27,9 @@ struct LocationRowView: View {
 
                 HStack(spacing: 0) {
                     Image("map")
+                        .renderingMode(.template)
+                        .foregroundStyle(AssetColor.blackLabels.color)
+
                     Text(locationData.location)
                         .font(NunitoFont.regular.size(14))
                         .frame(maxWidth: .infinity, alignment: .leading)

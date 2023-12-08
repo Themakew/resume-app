@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AboutMeBaseView<ViewModel: AboutMeBaseViewModelProtocol>: View {
     @State var viewModel: ViewModel
+    @State private var isAnimationPerformed = false
 
     @State private var helloOpacity: Double = 0
     @State private var helloOffset: CGFloat = 0
@@ -25,10 +26,10 @@ struct AboutMeBaseView<ViewModel: AboutMeBaseViewModelProtocol>: View {
             ZStack {
                 GeometryReader { geometry in
                     Image("picture")
-                        .resizable() // This makes the image resizable
-                        .scaledToFill() // This is similar to UIKit's .scaleAspectFill
+                        .resizable()
+                        .scaledToFill()
                         .frame(width: geometry.size.width, height: geometry.size.height)
-                        .clipped() // This ensures the image does not exceed its frame
+                        .clipped()
                         .ignoresSafeArea()
                 }
 
@@ -49,7 +50,7 @@ struct AboutMeBaseView<ViewModel: AboutMeBaseViewModelProtocol>: View {
             Spacer()
             ToolbarCustomButton(
                 title: viewModel.viewTitle,
-                backgroundColor: .white,
+                backgroundColor: AssetColor.whiteBackground.color,
                 foregroundColor: AssetColor.orangeTitle.color
             ) {
                 // TODO
@@ -60,6 +61,7 @@ struct AboutMeBaseView<ViewModel: AboutMeBaseViewModelProtocol>: View {
         .padding()
     }
 
+    @ViewBuilder
     private var labelsView: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -69,9 +71,11 @@ struct AboutMeBaseView<ViewModel: AboutMeBaseViewModelProtocol>: View {
                     .offset(x: helloOffset)
                     .foregroundStyle(.white)
                     .onAppear {
-                        withAnimation(.linear(duration: 0.75)) {
-                            helloOpacity = 1
-                            helloOffset += 15
+                        if !isAnimationPerformed {
+                            withAnimation(.linear(duration: 0.75)) {
+                                helloOpacity = 1
+                                helloOffset += 15
+                            }
                         }
                     }
                 Spacer()
@@ -84,9 +88,15 @@ struct AboutMeBaseView<ViewModel: AboutMeBaseViewModelProtocol>: View {
                     .offset(x: nameOffset)
                     .foregroundStyle(.white)
                     .onAppear {
-                        withAnimation(.linear(duration: 0.75).delay(0.75)) {
-                            nameOpacity = 1
-                            nameOffset += 15
+                        if !isAnimationPerformed {
+                            withAnimation(.linear(duration: 0.75).delay(0.75)) {
+                                nameOpacity = 1
+                                nameOffset += 15
+                            }
+
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.75 + 0.75) {
+                                isAnimationPerformed = true
+                            }
                         }
                     }
                 Spacer()
