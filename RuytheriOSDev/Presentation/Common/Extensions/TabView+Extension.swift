@@ -15,11 +15,13 @@ extension TabView {
         sheetCornerRadius: CGFloat = 20,
         @ViewBuilder content: @escaping () -> SheetContent
     ) -> some View {
-        self.modifier(BottomSheetModifier(
-            sheetYOffsetValue: sheetYOffsetValue,
-            initialHeight: initialHeight,
-            sheetCornerRadius: sheetCornerRadius,
-            sheetView: content())
+        self.modifier(
+            BottomSheetModifier(
+                sheetYOffsetValue: sheetYOffsetValue,
+                initialHeight: initialHeight,
+                sheetCornerRadius: sheetCornerRadius,
+                sheetView: content()
+            )
         )
     }
 }
@@ -37,13 +39,11 @@ fileprivate struct BottomSheetModifier<SheetContent: View>: ViewModifier {
         content
             .sheet(isPresented: $showSheet, content: {
                 GeometryReader { geometry in
-                    VStack {
-                        sheetView
-                            .onChange(of: geometry.frame(in: .global).minY) { _, newValue in
-                                sheetYOffsetValue = newValue
-                            }
-                    }
-                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    sheetView
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .onChange(of: geometry.frame(in: .global).minY) { _, newValue in
+                            sheetYOffsetValue = newValue
+                        }
                 }
                 .presentationDetents([.height(initialHeight), .fraction(0.99)])
                 .presentationCornerRadius(sheetCornerRadius)

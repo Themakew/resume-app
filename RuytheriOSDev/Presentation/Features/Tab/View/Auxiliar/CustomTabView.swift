@@ -14,59 +14,62 @@ struct CustomTabView: View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
                 Divider()
-                ZStack(alignment: .topLeading) {
-                    HStack(spacing: 0) {
-                        ForEach(Tab.allCases, id: \.self) { tab in
-                            Button(action: {
-                                viewModel.activeTab = tab
-                            }) {
-                                VStack() {
-                                    Spacer()
-                                    Image(tab.iconTitle)
-                                        .renderingMode(.template)
-                                        .foregroundColor(viewModel.activeTab == tab ? AssetColor.orangeIcon.color : .black)
-                                        .frame(width: 20, height: 20)
-
-                                    Text(tab.title)
-                                        .font(NunitoFont.regular.size(11))
-                                        .foregroundColor(viewModel.activeTab == tab ? AssetColor.orangeIcon.color : .black)
-                                    Spacer()
-                                }
-                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                .contentShape(.rect)
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                        }
-                    }
-                    Rectangle()
-                        .fill(Color.orange)
-                        .frame(width: highlightLineWidth(geometry: geometry), height: 2)
-                        .offset(x: highlightLineOffset(geometry: geometry), y: 0)
-                        .animation(.easeInOut(duration: 0.25), value: viewModel.activeTab)
-                        .contentShape(.rect)
-                }
+                tabBarView(geometry: geometry)
             }
         }
         .background(Color(.systemBackground))
         .frame(height: 50)
     }
 
-    // Calculate the width of each tab
+    // MARK: - Tab Bar View
+
+    @ViewBuilder
+    private func tabBarView(geometry: GeometryProxy) -> some View {
+        ZStack(alignment: .topLeading) {
+            tabBarButtonsView()
+            highlightLineView(geometry: geometry)
+        }
+    }
+
+    // MARK: - Tab Bar Buttons
+
+    @ViewBuilder
+    private func tabBarButtonsView() -> some View {
+        HStack(spacing: 0) {
+            ForEach(Tab.allCases, id: \.self) { tab in
+                TabBarButton(tab: tab, isActive: viewModel.activeTab == tab, action: {
+                    viewModel.activeTab = tab
+                })
+            }
+        }
+    }
+
+    // MARK: - Highlight Line
+
+    @ViewBuilder
+    private func highlightLineView(geometry: GeometryProxy) -> some View {
+        Rectangle()
+            .fill(Color.orange)
+            .frame(width: highlightLineWidth(geometry: geometry), height: 2)
+            .offset(x: highlightLineOffset(geometry: geometry), y: 0)
+            .animation(.easeInOut(duration: 0.25), value: viewModel.activeTab)
+    }
+
+    // MARK: - Helper Methods
+
     private func tabWidth(geometry: GeometryProxy) -> CGFloat {
         let tabCount = CGFloat(Tab.allCases.count)
         return geometry.size.width / tabCount
     }
 
-    // Calculate a smaller width for the highlight line
     private func highlightLineWidth(geometry: GeometryProxy) -> CGFloat {
-        return tabWidth(geometry: geometry) * 0.7 // 50% of the tab width
+        return tabWidth(geometry: geometry) * 0.7
     }
 
-    // Calculate the offset to center the highlight line
     private func highlightLineOffset(geometry: GeometryProxy) -> CGFloat {
         let selectedIndex = CGFloat(Tab.allCases.firstIndex(of: viewModel.activeTab) ?? 0)
-        let tabWidth = self.tabWidth(geometry: geometry)
-        let lineHalfWidth = self.highlightLineWidth(geometry: geometry) / 2
+        let tabWidth = tabWidth(geometry: geometry)
+        let lineHalfWidth = highlightLineWidth(geometry: geometry) / 2
         return selectedIndex * tabWidth + (tabWidth / 2 - lineHalfWidth)
     }
 }

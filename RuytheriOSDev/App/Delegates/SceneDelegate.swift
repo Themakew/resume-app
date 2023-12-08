@@ -20,13 +20,18 @@ import SwiftUI
             return
         }
 
+        // Create the CustomTabView
         let customTabView = CustomTabView(viewModel: viewModel)
             .frame(maxHeight: .infinity, alignment: .bottom)
+
+        // Set up the hosting controller
         let tabViewController = UIHostingController(rootView: customTabView)
         tabViewController.view.backgroundColor = .clear
 
+        // Create and configure the PassThroughWindow
         let tabWindow = PassThroughtWindow(windowScene: scene)
         tabWindow.rootViewController = tabViewController
+        tabWindow.backgroundColor = .clear
         tabWindow.isHidden = false
 
         self.tabWindow = tabWindow

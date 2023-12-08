@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		566A4D5B2B20DD6B00008EEE /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D5A2B20DD6B00008EEE /* TabBarButton.swift */; };
+		566A4D5D2B20F7CE00008EEE /* AboutMeBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */; };
+		566A4D632B21046400008EEE /* AboutMeSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D622B21046400008EEE /* AboutMeSheetViewModel.swift */; };
+		566A4D652B21046E00008EEE /* AboutMeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D642B21046E00008EEE /* AboutMeSheetView.swift */; };
 		569A074F2B1FD23D004AA63A /* RuytheriOSDevApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A074E2B1FD23D004AA63A /* RuytheriOSDevApp.swift */; };
-		569A07512B1FD23D004AA63A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07502B1FD23D004AA63A /* ContentView.swift */; };
+		569A07512B1FD23D004AA63A /* AboutMeBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07502B1FD23D004AA63A /* AboutMeBaseView.swift */; };
 		569A07532B1FD23E004AA63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569A07522B1FD23E004AA63A /* Assets.xcassets */; };
 		569A07562B1FD23E004AA63A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569A07552B1FD23E004AA63A /* Preview Assets.xcassets */; };
 		569A07602B1FD23F004AA63A /* RuytheriOSDevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A075F2B1FD23F004AA63A /* RuytheriOSDevTests.swift */; };
@@ -35,6 +39,8 @@
 		569A07B62B20294E004AA63A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07B52B20294E004AA63A /* Font.swift */; };
 		569A07BA2B202CE5004AA63A /* AssetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07B92B202CE5004AA63A /* AssetColor.swift */; };
 		569A07BE2B202F69004AA63A /* ToolbarCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07BD2B202F69004AA63A /* ToolbarCustomButton.swift */; };
+		56E575712B224E130098C9A0 /* BubbleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E575702B224E130098C9A0 /* BubbleRowView.swift */; };
+		56E575732B224F420098C9A0 /* LanguageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E575722B224F420098C9A0 /* LanguageRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +61,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		566A4D5A2B20DD6B00008EEE /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeBaseViewModel.swift; sourceTree = "<group>"; };
+		566A4D622B21046400008EEE /* AboutMeSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeSheetViewModel.swift; sourceTree = "<group>"; };
+		566A4D642B21046E00008EEE /* AboutMeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeSheetView.swift; sourceTree = "<group>"; };
 		569A074B2B1FD23D004AA63A /* RuytheriOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuytheriOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		569A074E2B1FD23D004AA63A /* RuytheriOSDevApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuytheriOSDevApp.swift; sourceTree = "<group>"; };
-		569A07502B1FD23D004AA63A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		569A07502B1FD23D004AA63A /* AboutMeBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeBaseView.swift; sourceTree = "<group>"; };
 		569A07522B1FD23E004AA63A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		569A07552B1FD23E004AA63A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		569A075B2B1FD23F004AA63A /* RuytheriOSDevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuytheriOSDevTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,9 +94,11 @@
 		569A07AA2B202924004AA63A /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		569A07AB2B202924004AA63A /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
 		569A07B52B20294E004AA63A /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		569A07B72B202969004AA63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		569A07B72B202969004AA63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569A07B92B202CE5004AA63A /* AssetColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetColor.swift; sourceTree = "<group>"; };
 		569A07BD2B202F69004AA63A /* ToolbarCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarCustomButton.swift; sourceTree = "<group>"; };
+		56E575702B224E130098C9A0 /* BubbleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleRowView.swift; sourceTree = "<group>"; };
+		56E575722B224F420098C9A0 /* LanguageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +126,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		566A4D5E2B2101BB00008EEE /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				569A07882B200580004AA63A /* ViewModel */,
+				569A07872B20057B004AA63A /* View */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		566A4D5F2B2101C300008EEE /* SheetView */ = {
+			isa = PBXGroup;
+			children = (
+				566A4D612B21044B00008EEE /* ViewModel */,
+				566A4D602B21044700008EEE /* View */,
+			);
+			path = SheetView;
+			sourceTree = "<group>";
+		};
+		566A4D602B21044700008EEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56E5756F2B224DE50098C9A0 /* Rows */,
+				566A4D642B21046E00008EEE /* AboutMeSheetView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		566A4D612B21044B00008EEE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				566A4D622B21046400008EEE /* AboutMeSheetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		569A07422B1FD23D004AA63A = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +184,6 @@
 		569A074D2B1FD23D004AA63A /* RuytheriOSDev */ = {
 			isa = PBXGroup;
 			children = (
-				569A07B72B202969004AA63A /* Info.plist */,
 				569A07782B200384004AA63A /* App */,
 				569A07822B2004E1004AA63A /* Infrastructure */,
 				569A07832B200514004AA63A /* Data */,
@@ -177,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				569A074E2B1FD23D004AA63A /* RuytheriOSDevApp.swift */,
+				569A07B72B202969004AA63A /* Info.plist */,
 				569A078E2B2008FF004AA63A /* Delegates */,
 			);
 			path = App;
@@ -245,8 +292,8 @@
 		569A07862B20056F004AA63A /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
-				569A07882B200580004AA63A /* ViewModel */,
-				569A07872B20057B004AA63A /* View */,
+				566A4D5F2B2101C300008EEE /* SheetView */,
+				566A4D5E2B2101BB00008EEE /* BaseView */,
 			);
 			path = AboutMe;
 			sourceTree = "<group>";
@@ -254,7 +301,7 @@
 		569A07872B20057B004AA63A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				569A07502B1FD23D004AA63A /* ContentView.swift */,
+				569A07502B1FD23D004AA63A /* AboutMeBaseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -262,6 +309,7 @@
 		569A07882B200580004AA63A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -372,8 +420,18 @@
 			isa = PBXGroup;
 			children = (
 				569A07BD2B202F69004AA63A /* ToolbarCustomButton.swift */,
+				566A4D5A2B20DD6B00008EEE /* TabBarButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		56E5756F2B224DE50098C9A0 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				56E575702B224E130098C9A0 /* BubbleRowView.swift */,
+				56E575722B224F420098C9A0 /* LanguageRowView.swift */,
+			);
+			path = Rows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,15 +576,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				569A078D2B20061D004AA63A /* BaseTabViewModel.swift in Sources */,
-				569A07512B1FD23D004AA63A /* ContentView.swift in Sources */,
+				569A07512B1FD23D004AA63A /* AboutMeBaseView.swift in Sources */,
+				566A4D652B21046E00008EEE /* AboutMeSheetView.swift in Sources */,
 				569A07BA2B202CE5004AA63A /* AssetColor.swift in Sources */,
+				566A4D632B21046400008EEE /* AboutMeSheetViewModel.swift in Sources */,
+				566A4D5B2B20DD6B00008EEE /* TabBarButton.swift in Sources */,
 				569A07B62B20294E004AA63A /* Font.swift in Sources */,
 				569A079C2B20163D004AA63A /* TabView+Extension.swift in Sources */,
+				566A4D5D2B20F7CE00008EEE /* AboutMeBaseViewModel.swift in Sources */,
+				56E575712B224E130098C9A0 /* BubbleRowView.swift in Sources */,
 				569A079A2B201624004AA63A /* View+Extension.swift in Sources */,
 				569A078B2B2005F2004AA63A /* BaseTabView.swift in Sources */,
 				569A07912B200917004AA63A /* AppDelegate.swift in Sources */,
 				569A074F2B1FD23D004AA63A /* RuytheriOSDevApp.swift in Sources */,
 				569A07932B200924004AA63A /* SceneDelegate.swift in Sources */,
+				56E575732B224F420098C9A0 /* LanguageRowView.swift in Sources */,
 				569A07BE2B202F69004AA63A /* ToolbarCustomButton.swift in Sources */,
 				569A07962B2009A3004AA63A /* CustomTabView.swift in Sources */,
 			);
@@ -695,7 +759,7 @@
 				DEVELOPMENT_TEAM = CSD6NA874L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RuytheriOSDev/Info.plist;
+				INFOPLIST_FILE = RuytheriOSDev/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RuytheriOSDev;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -729,7 +793,7 @@
 				DEVELOPMENT_TEAM = CSD6NA874L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RuytheriOSDev/Info.plist;
+				INFOPLIST_FILE = RuytheriOSDev/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RuytheriOSDev;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
