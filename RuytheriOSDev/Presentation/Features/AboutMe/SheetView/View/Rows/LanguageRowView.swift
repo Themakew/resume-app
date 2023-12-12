@@ -29,8 +29,9 @@ struct LanguageRowView: View {
             ZStack {
                 Rectangle()
                     .frame(height: 130)
-                    .cornerRadius(20.0)
+                    .cornerRadius(15)
                     .foregroundStyle(AssetColor.whiteBackground.color)
+                    .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 0)
 
                 VStack(spacing: 24) {
                     getLanguageDetailRowView(title: languageData.firstLanguageTitle, progressRange: languageData.firstLanguageValue)

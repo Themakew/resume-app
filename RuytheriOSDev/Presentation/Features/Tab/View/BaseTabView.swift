@@ -11,50 +11,69 @@ struct BaseTabView: View {
     // MARK: - SwiftUI Binders
 
     @State var viewModel: BaseTabViewModel
-    @State var sheetYOffsetValue: CGFloat = 131
+    @State var sheetYOffsetValue: CGFloat = 141
+
+    @State var bottomBubbleAnimated: Bool = false
+    @State var middleBubbleAnimated: Bool = false
+    @State var topBubbleAnimated: Bool = false
 
     @Environment(SceneDelegate.self) private var sceneDelegate
 
     // MARK: - Private Property
 
-    private let maximumSheetYOffsetValue: CGFloat = 130
+    private let maximumSheetYOffsetValue: CGFloat = 140
 
     // AboutMe ViewModels
     private let aboutMeSheetViewModel = AboutMeSheetViewModel()
     private let aboutMeTabViewModel = AboutMeBaseViewModel()
 
+    // CareerGoals ViewModels
+    private let careerGoalsSheetViewModel = CareerGoalsSheetViewModel()
+    private let careerGoalsTabViewModel = CareerGoalsBaseViewModel()
+
+    private let educationBaseViewModel = EducationBaseViewModel()
+
+    private let experienceBaseViewModel = ExperienceBaseViewModel()
+
+    private let passionBaseViewModel = PassionBaseViewModel()
+
     // MARK: - SwiftUI Body
 
     var body: some View {
         TabView(selection: $viewModel.activeTab) {
-            AboutMeBaseView(
+            TabBackgroundView(
                 viewModel: aboutMeTabViewModel,
                 sheetYOffsetValue: $sheetYOffsetValue, 
                 maximumSheetYOffsetValue: maximumSheetYOffsetValue
             )
-
-            NavigationStack {
-                Text(Tab.careerGoals.title)
-            }
-            .tag(Tab.careerGoals)
             .hideNativeTabBar()
 
-            NavigationStack {
-                Text(Tab.education.title)
-            }
-            .tag(Tab.education)
+            TabBackgroundView(
+                viewModel: careerGoalsTabViewModel,
+                sheetYOffsetValue: $sheetYOffsetValue,
+                maximumSheetYOffsetValue: maximumSheetYOffsetValue
+            )
             .hideNativeTabBar()
 
-            NavigationStack {
-                Text(Tab.experience.title)
-            }
-            .tag(Tab.experience)
+            TabBackgroundView(
+                viewModel: educationBaseViewModel,
+                sheetYOffsetValue: $sheetYOffsetValue,
+                maximumSheetYOffsetValue: maximumSheetYOffsetValue
+            )
             .hideNativeTabBar()
 
-            NavigationStack {
-                Text(Tab.passions.title)
-            }
-            .tag(Tab.passions)
+            TabBackgroundView(
+                viewModel: experienceBaseViewModel,
+                sheetYOffsetValue: $sheetYOffsetValue,
+                maximumSheetYOffsetValue: maximumSheetYOffsetValue
+            )
+            .hideNativeTabBar()
+
+            TabBackgroundView(
+                viewModel: passionBaseViewModel,
+                sheetYOffsetValue: $sheetYOffsetValue,
+                maximumSheetYOffsetValue: maximumSheetYOffsetValue
+            )
             .hideNativeTabBar()
         }
         .tabSheet(sheetYOffsetValue: $sheetYOffsetValue, selectedDetent: $viewModel.selectedDetent) {
@@ -79,6 +98,13 @@ struct BaseTabView: View {
 // MARK: - ViewBuilder Extension
 
 extension BaseTabView {
+    private var isToAnimateBinding: Binding<Bool> {
+        Binding(
+            get: { self.sheetYOffsetValue < self.maximumSheetYOffsetValue },
+            set: { _ in }
+        )
+    }
+
     @ViewBuilder
     private var sheetView: some View {
         NavigationStack {
@@ -88,7 +114,13 @@ extension BaseTabView {
                     case .aboutMe:
                         AboutMeSheetView(viewModel: aboutMeSheetViewModel)
                     case .careerGoals:
-                        Text("careerGoals") // TODO
+                        CareerGoalsSheetView(
+                            isToAnimate: isToAnimateBinding,
+                            viewModel: careerGoalsSheetViewModel, 
+                            bottomBubbleAnimated: $bottomBubbleAnimated,
+                            middleBubbleAnimated: $middleBubbleAnimated,
+                            topBubbleAnimated: $topBubbleAnimated
+                        )
                     case .education:
                         Text("education") // TODO
                     case .experience:
@@ -97,6 +129,7 @@ extension BaseTabView {
                         Text("passions") // TODO
                     }
                 }
+                .padding(.bottom, 50)
             }
             .scrollIndicators(.hidden)
             .scrollContentBackground(.hidden)

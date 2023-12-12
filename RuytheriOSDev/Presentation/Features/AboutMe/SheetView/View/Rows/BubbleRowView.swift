@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct BubbleRowView: View {
-    var bubleData: AboutMeSheetViewModel.BubbleData
+    var bubbleData: AboutMeSheetViewModel.BubbleData
 
     var body: some View {
         VStack(spacing: 4) {
-            Text(bubleData.title)
+            Text(bubbleData.title)
                 .font(NunitoFont.black.size(15))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, 4)
@@ -21,11 +21,12 @@ struct BubbleRowView: View {
 
             ZStack() {
                 Rectangle()
-                    .frame(height: 100)
-                    .cornerRadius(20.0)
+                    .frame(height: bubbleData.expandedBuble ? 130 : 100)
+                    .cornerRadius(15)
                     .foregroundStyle(AssetColor.whiteBackground.color)
+                    .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 0)
 
-                Text(bubleData.description)
+                Text(bubbleData.description)
                     .font(NunitoFont.regular.size(14))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
@@ -40,5 +41,6 @@ struct BubbleRowView: View {
 }
 
 #Preview {
-    BubbleRowView(bubleData: AboutMeSheetViewModel.BubbleData(title: "Title", description: "description"))
+    BubbleRowView(bubbleData: AboutMeSheetViewModel.BubbleData(title: "Title", description: "description", expandedBuble: false))
+        .background(.cyan)
 }

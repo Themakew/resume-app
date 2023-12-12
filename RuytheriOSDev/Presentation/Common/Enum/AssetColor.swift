@@ -15,6 +15,8 @@ enum AssetColor: String {
     case orangeIcon = "OrangeIcon"
     case orangeTitle = "OrangeTitle"
     case whiteBackground = "WhiteBackground"
+    case firstGradientColor = "FirstGradientColor"
+    case secondGradientColor = "SecondGradientColor"
 
     var color: Color {
         Color(self.rawValue)

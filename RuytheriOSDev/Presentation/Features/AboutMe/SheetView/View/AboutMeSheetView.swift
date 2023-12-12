@@ -10,18 +10,12 @@ import SwiftUI
 struct AboutMeSheetView<ViewModel: AboutMeSheetViewModelProtocol>: View {
     @State var viewModel: ViewModel
 
-    enum Test {
-        case test1(String)
-    }
-
-    let arrayTest: [Test] = [.test1("")]
-
     var body: some View {
         VStack(spacing: 0) {
             ForEach(Array(viewModel.screenData.enumerated()), id: \.element) { index, item in
                 switch item {
                 case let .bubble(bubbleData):
-                    BubbleRowView(bubleData: bubbleData)
+                    BubbleRowView(bubbleData: bubbleData)
                 case let .language(languageList):
                     LanguageRowView(languageData: languageList)
                 case let .location(locationData):
@@ -37,5 +31,4 @@ struct AboutMeSheetView<ViewModel: AboutMeSheetViewModelProtocol>: View {
 
 #Preview {
     AboutMeSheetView(viewModel: AboutMeSheetViewModel())
-        .background(.cyan)
 }

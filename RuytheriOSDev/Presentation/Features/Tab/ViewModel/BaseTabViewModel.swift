@@ -74,8 +74,8 @@ protocol BaseTabViewModelProtocol {
     var selectedDetent = PresentationDetent.height(100)
 
     private var lastActiveTab: Tab = .aboutMe
-    private var sheetStatusByTab: [Tab:PresentationDetent] = [
-        .aboutMe: .height(100), .careerGoals: .height(100), .education: .height(100), .experience: .height(100), .passions: .height(100)
+    private var sheetStatusByTab: [Tab: PresentationDetent] = [
+        .aboutMe: .height(110), .careerGoals: .height(110), .education: .height(110), .experience: .height(110), .passions: .height(110)
     ]
 
     func updateSheetDetentStatus() {

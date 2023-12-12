@@ -25,6 +25,7 @@ protocol AboutMeSheetViewModelProtocol {
     struct BubbleData: Hashable {
         let title: String
         let description: String
+        let expandedBuble: Bool
     }
 
     struct LanguageData: Hashable {
@@ -45,13 +46,15 @@ protocol AboutMeSheetViewModelProtocol {
             .bubble(
                 BubbleData(
                     title: "Who am I?",
-                    description: "Brazilian and future Canadian deeply passionate about technology and its transformative power. Passionate about learning, especially in tech and music. 👨🏾‍💻❤️🥁"
+                    description: "I am a Brazilian and aspiring Canadian who is thrilled by technology and its transformational power. Passionate in learning, particularly in technology and music. 👨🏾‍💻❤️🥁",
+                    expandedBuble: false
                 )
             ),
             .bubble(
                 BubbleData(
                     title: "Who am I looking for?",
-                    description: "I am looking for an iOS Developer position on exciting projects that will provide challenges and user-centric solutions. I can't wait to create something that will have an impact on people's lives! 📱⌚️"
+                    description: "I am looking for an iOS Developer position on exciting projects that will provide challenges and user-centric solutions. I can't wait to create something that will have an impact on people's lives! 📱⌚️",
+                    expandedBuble: true
                 )
             ),
             .language(

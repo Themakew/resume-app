@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561E34A42B27E05A004BAA08 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561E34A32B27E05A004BAA08 /* BubbleView.swift */; };
 		566A4D5B2B20DD6B00008EEE /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D5A2B20DD6B00008EEE /* TabBarButton.swift */; };
 		566A4D5D2B20F7CE00008EEE /* AboutMeBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */; };
 		566A4D632B21046400008EEE /* AboutMeSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D622B21046400008EEE /* AboutMeSheetViewModel.swift */; };
 		566A4D652B21046E00008EEE /* AboutMeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D642B21046E00008EEE /* AboutMeSheetView.swift */; };
 		5693092C2B238BAA00C84DE8 /* LocationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5693092B2B238BAA00C84DE8 /* LocationRowView.swift */; };
+		569309352B24331900C84DE8 /* CareerGoalsBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569309342B24331900C84DE8 /* CareerGoalsBaseViewModel.swift */; };
+		5693093F2B243C3400C84DE8 /* EducationBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5693093E2B243C3400C84DE8 /* EducationBaseViewModel.swift */; };
+		569309412B243C4600C84DE8 /* ExperienceBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569309402B243C4600C84DE8 /* ExperienceBaseViewModel.swift */; };
+		569309432B243C5400C84DE8 /* PassionBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569309422B243C5400C84DE8 /* PassionBaseViewModel.swift */; };
 		569A074F2B1FD23D004AA63A /* RuytheriOSDevApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A074E2B1FD23D004AA63A /* RuytheriOSDevApp.swift */; };
-		569A07512B1FD23D004AA63A /* AboutMeBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07502B1FD23D004AA63A /* AboutMeBaseView.swift */; };
+		569A07512B1FD23D004AA63A /* TabBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07502B1FD23D004AA63A /* TabBackgroundView.swift */; };
 		569A07532B1FD23E004AA63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569A07522B1FD23E004AA63A /* Assets.xcassets */; };
 		569A07562B1FD23E004AA63A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569A07552B1FD23E004AA63A /* Preview Assets.xcassets */; };
 		569A07602B1FD23F004AA63A /* RuytheriOSDevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A075F2B1FD23F004AA63A /* RuytheriOSDevTests.swift */; };
@@ -40,6 +45,8 @@
 		569A07B62B20294E004AA63A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07B52B20294E004AA63A /* Font.swift */; };
 		569A07BA2B202CE5004AA63A /* AssetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07B92B202CE5004AA63A /* AssetColor.swift */; };
 		569A07BE2B202F69004AA63A /* ToolbarCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07BD2B202F69004AA63A /* ToolbarCustomButton.swift */; };
+		56E477D02B2553EC0095F408 /* CareerGoalsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E477CF2B2553EC0095F408 /* CareerGoalsSheetView.swift */; };
+		56E477D22B2554030095F408 /* CareerGoalsSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E477D12B2554030095F408 /* CareerGoalsSheetViewModel.swift */; };
 		56E575712B224E130098C9A0 /* BubbleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E575702B224E130098C9A0 /* BubbleRowView.swift */; };
 		56E575732B224F420098C9A0 /* LanguageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E575722B224F420098C9A0 /* LanguageRowView.swift */; };
 /* End PBXBuildFile section */
@@ -62,14 +69,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		561E34A32B27E05A004BAA08 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		566A4D5A2B20DD6B00008EEE /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeBaseViewModel.swift; sourceTree = "<group>"; };
 		566A4D622B21046400008EEE /* AboutMeSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeSheetViewModel.swift; sourceTree = "<group>"; };
 		566A4D642B21046E00008EEE /* AboutMeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeSheetView.swift; sourceTree = "<group>"; };
 		5693092B2B238BAA00C84DE8 /* LocationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRowView.swift; sourceTree = "<group>"; };
+		569309342B24331900C84DE8 /* CareerGoalsBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerGoalsBaseViewModel.swift; sourceTree = "<group>"; };
+		5693093E2B243C3400C84DE8 /* EducationBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationBaseViewModel.swift; sourceTree = "<group>"; };
+		569309402B243C4600C84DE8 /* ExperienceBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceBaseViewModel.swift; sourceTree = "<group>"; };
+		569309422B243C5400C84DE8 /* PassionBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassionBaseViewModel.swift; sourceTree = "<group>"; };
 		569A074B2B1FD23D004AA63A /* RuytheriOSDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuytheriOSDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		569A074E2B1FD23D004AA63A /* RuytheriOSDevApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuytheriOSDevApp.swift; sourceTree = "<group>"; };
-		569A07502B1FD23D004AA63A /* AboutMeBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeBaseView.swift; sourceTree = "<group>"; };
+		569A07502B1FD23D004AA63A /* TabBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBackgroundView.swift; sourceTree = "<group>"; };
 		569A07522B1FD23E004AA63A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		569A07552B1FD23E004AA63A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		569A075B2B1FD23F004AA63A /* RuytheriOSDevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuytheriOSDevTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +111,8 @@
 		569A07B72B202969004AA63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569A07B92B202CE5004AA63A /* AssetColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetColor.swift; sourceTree = "<group>"; };
 		569A07BD2B202F69004AA63A /* ToolbarCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarCustomButton.swift; sourceTree = "<group>"; };
+		56E477CF2B2553EC0095F408 /* CareerGoalsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerGoalsSheetView.swift; sourceTree = "<group>"; };
+		56E477D12B2554030095F408 /* CareerGoalsSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerGoalsSheetViewModel.swift; sourceTree = "<group>"; };
 		56E575702B224E130098C9A0 /* BubbleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleRowView.swift; sourceTree = "<group>"; };
 		56E575722B224F420098C9A0 /* LanguageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,11 +142,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		561E34A22B27E046004BAA08 /* Auxiliar */ = {
+			isa = PBXGroup;
+			children = (
+				561E34A32B27E05A004BAA08 /* BubbleView.swift */,
+			);
+			path = Auxiliar;
+			sourceTree = "<group>";
+		};
 		566A4D5E2B2101BB00008EEE /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
-				569A07882B200580004AA63A /* ViewModel */,
-				569A07872B20057B004AA63A /* View */,
+				566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -161,6 +182,97 @@
 				566A4D622B21046400008EEE /* AboutMeSheetViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5693092D2B23E40700C84DE8 /* CareerGoals */ = {
+			isa = PBXGroup;
+			children = (
+				5693092E2B23E42600C84DE8 /* SheetView */,
+				5693092F2B23E43000C84DE8 /* BaseView */,
+			);
+			path = CareerGoals;
+			sourceTree = "<group>";
+		};
+		5693092E2B23E42600C84DE8 /* SheetView */ = {
+			isa = PBXGroup;
+			children = (
+				569309312B23E44500C84DE8 /* ViewModel */,
+				569309302B23E44000C84DE8 /* View */,
+			);
+			path = SheetView;
+			sourceTree = "<group>";
+		};
+		5693092F2B23E43000C84DE8 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				569309342B24331900C84DE8 /* CareerGoalsBaseViewModel.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		569309302B23E44000C84DE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				561E34A22B27E046004BAA08 /* Auxiliar */,
+				56E477CF2B2553EC0095F408 /* CareerGoalsSheetView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		569309312B23E44500C84DE8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56E477D12B2554030095F408 /* CareerGoalsSheetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		569309382B243BBE00C84DE8 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				5693093B2B243C0000C84DE8 /* BaseView */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		569309392B243BE400C84DE8 /* Experience */ = {
+			isa = PBXGroup;
+			children = (
+				5693093C2B243C0C00C84DE8 /* BaseView */,
+			);
+			path = Experience;
+			sourceTree = "<group>";
+		};
+		5693093A2B243BF300C84DE8 /* Passion */ = {
+			isa = PBXGroup;
+			children = (
+				5693093D2B243C1200C84DE8 /* New Group */,
+			);
+			path = Passion;
+			sourceTree = "<group>";
+		};
+		5693093B2B243C0000C84DE8 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				5693093E2B243C3400C84DE8 /* EducationBaseViewModel.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		5693093C2B243C0C00C84DE8 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				569309402B243C4600C84DE8 /* ExperienceBaseViewModel.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		5693093D2B243C1200C84DE8 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				569309422B243C5400C84DE8 /* PassionBaseViewModel.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		569A07422B1FD23D004AA63A = {
@@ -287,6 +399,10 @@
 			children = (
 				569A07972B201609004AA63A /* Tab */,
 				569A07862B20056F004AA63A /* AboutMe */,
+				5693092D2B23E40700C84DE8 /* CareerGoals */,
+				569309382B243BBE00C84DE8 /* Education */,
+				569309392B243BE400C84DE8 /* Experience */,
+				5693093A2B243BF300C84DE8 /* Passion */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -298,22 +414,6 @@
 				566A4D5E2B2101BB00008EEE /* BaseView */,
 			);
 			path = AboutMe;
-			sourceTree = "<group>";
-		};
-		569A07872B20057B004AA63A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				569A07502B1FD23D004AA63A /* AboutMeBaseView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		569A07882B200580004AA63A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		569A07892B20058C004AA63A /* Common */ = {
@@ -364,6 +464,7 @@
 		569A07A12B202247004AA63A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				569A07502B1FD23D004AA63A /* TabBackgroundView.swift */,
 				569A078A2B2005F2004AA63A /* BaseTabView.swift */,
 				569A07B82B202A9A004AA63A /* Auxiliar */,
 			);
@@ -579,21 +680,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				569A078D2B20061D004AA63A /* BaseTabViewModel.swift in Sources */,
-				569A07512B1FD23D004AA63A /* AboutMeBaseView.swift in Sources */,
+				569309432B243C5400C84DE8 /* PassionBaseViewModel.swift in Sources */,
+				569A07512B1FD23D004AA63A /* TabBackgroundView.swift in Sources */,
 				566A4D652B21046E00008EEE /* AboutMeSheetView.swift in Sources */,
 				569A07BA2B202CE5004AA63A /* AssetColor.swift in Sources */,
 				566A4D632B21046400008EEE /* AboutMeSheetViewModel.swift in Sources */,
+				561E34A42B27E05A004BAA08 /* BubbleView.swift in Sources */,
 				566A4D5B2B20DD6B00008EEE /* TabBarButton.swift in Sources */,
 				569A07B62B20294E004AA63A /* Font.swift in Sources */,
 				569A079C2B20163D004AA63A /* TabView+Extension.swift in Sources */,
+				56E477D02B2553EC0095F408 /* CareerGoalsSheetView.swift in Sources */,
 				566A4D5D2B20F7CE00008EEE /* AboutMeBaseViewModel.swift in Sources */,
 				56E575712B224E130098C9A0 /* BubbleRowView.swift in Sources */,
 				569A079A2B201624004AA63A /* View+Extension.swift in Sources */,
+				5693093F2B243C3400C84DE8 /* EducationBaseViewModel.swift in Sources */,
 				5693092C2B238BAA00C84DE8 /* LocationRowView.swift in Sources */,
+				569309412B243C4600C84DE8 /* ExperienceBaseViewModel.swift in Sources */,
 				569A078B2B2005F2004AA63A /* BaseTabView.swift in Sources */,
 				569A07912B200917004AA63A /* AppDelegate.swift in Sources */,
 				569A074F2B1FD23D004AA63A /* RuytheriOSDevApp.swift in Sources */,
 				569A07932B200924004AA63A /* SceneDelegate.swift in Sources */,
+				569309352B24331900C84DE8 /* CareerGoalsBaseViewModel.swift in Sources */,
+				56E477D22B2554030095F408 /* CareerGoalsSheetViewModel.swift in Sources */,
 				56E575732B224F420098C9A0 /* LanguageRowView.swift in Sources */,
 				569A07BE2B202F69004AA63A /* ToolbarCustomButton.swift in Sources */,
 				569A07962B2009A3004AA63A /* CustomTabView.swift in Sources */,
@@ -770,6 +878,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -804,6 +913,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

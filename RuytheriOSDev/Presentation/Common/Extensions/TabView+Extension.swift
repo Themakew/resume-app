@@ -12,7 +12,7 @@ extension TabView {
     func tabSheet<SheetContent: View>(
         sheetYOffsetValue: Binding<CGFloat>,
         selectedDetent: Binding<PresentationDetent>,
-        initialHeight: CGFloat = 100,
+        initialHeight: CGFloat = 110,
         sheetCornerRadius: CGFloat = 20,
         @ViewBuilder content: @escaping () -> SheetContent
     ) -> some View {
@@ -34,6 +34,15 @@ fileprivate struct BottomSheetModifier<SheetContent: View>: ViewModifier {
 
     @State private var showSheet = true
 
+    private let gradient = LinearGradient (
+        gradient: Gradient(colors: [
+            AssetColor.firstGradientColor.color,
+            AssetColor.secondGradientColor.color
+        ]),
+        startPoint: .top,
+        endPoint: .bottom
+    )
+
     var initialHeight: CGFloat
     var sheetCornerRadius: CGFloat
     var sheetView: SheetContent
@@ -51,8 +60,17 @@ fileprivate struct BottomSheetModifier<SheetContent: View>: ViewModifier {
                 .presentationDetents([.height(initialHeight), .fraction(0.99)], selection: $selectedDetent)
                 .presentationCornerRadius(sheetCornerRadius)
                 .presentationBackgroundInteraction(.enabled(upThrough: .medium))
-                .presentationBackground(.regularMaterial)
+                .presentationBackground(content: {
+                    backgroundGradient
+                })
                 .interactiveDismissDisabled()
             })
+    }
+
+    @ViewBuilder
+    private var backgroundGradient: some View {
+        Rectangle()
+            .fill(gradient)
+            .edgesIgnoringSafeArea(.all)
     }
 }
