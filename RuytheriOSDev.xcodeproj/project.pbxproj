@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		561E34A42B27E05A004BAA08 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561E34A32B27E05A004BAA08 /* BubbleView.swift */; };
+		56348AE02B2A2A84002EFBD3 /* EducationSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56348ADF2B2A2A84002EFBD3 /* EducationSheetViewModel.swift */; };
+		56348AE22B2A2A94002EFBD3 /* EducationSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56348AE12B2A2A94002EFBD3 /* EducationSheetView.swift */; };
+		56348AE52B2A3CA5002EFBD3 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56348AE42B2A3CA5002EFBD3 /* SectionView.swift */; };
+		56348AE82B2A3EB2002EFBD3 /* EducationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56348AE72B2A3EB2002EFBD3 /* EducationRowView.swift */; };
+		56348AEA2B2A5DD3002EFBD3 /* CertificateRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56348AE92B2A5DD3002EFBD3 /* CertificateRowView.swift */; };
 		566A4D5B2B20DD6B00008EEE /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D5A2B20DD6B00008EEE /* TabBarButton.swift */; };
 		566A4D5D2B20F7CE00008EEE /* AboutMeBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */; };
 		566A4D632B21046400008EEE /* AboutMeSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A4D622B21046400008EEE /* AboutMeSheetViewModel.swift */; };
@@ -45,6 +50,7 @@
 		569A07B62B20294E004AA63A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07B52B20294E004AA63A /* Font.swift */; };
 		569A07BA2B202CE5004AA63A /* AssetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07B92B202CE5004AA63A /* AssetColor.swift */; };
 		569A07BE2B202F69004AA63A /* ToolbarCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A07BD2B202F69004AA63A /* ToolbarCustomButton.swift */; };
+		56B0C0AF2B2A67AB00D0BA90 /* SkillSectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B0C0AE2B2A67AB00D0BA90 /* SkillSectionRow.swift */; };
 		56E477D02B2553EC0095F408 /* CareerGoalsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E477CF2B2553EC0095F408 /* CareerGoalsSheetView.swift */; };
 		56E477D22B2554030095F408 /* CareerGoalsSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E477D12B2554030095F408 /* CareerGoalsSheetViewModel.swift */; };
 		56E575712B224E130098C9A0 /* BubbleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E575702B224E130098C9A0 /* BubbleRowView.swift */; };
@@ -70,6 +76,11 @@
 
 /* Begin PBXFileReference section */
 		561E34A32B27E05A004BAA08 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
+		56348ADF2B2A2A84002EFBD3 /* EducationSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationSheetViewModel.swift; sourceTree = "<group>"; };
+		56348AE12B2A2A94002EFBD3 /* EducationSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationSheetView.swift; sourceTree = "<group>"; };
+		56348AE42B2A3CA5002EFBD3 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		56348AE72B2A3EB2002EFBD3 /* EducationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationRowView.swift; sourceTree = "<group>"; };
+		56348AE92B2A5DD3002EFBD3 /* CertificateRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateRowView.swift; sourceTree = "<group>"; };
 		566A4D5A2B20DD6B00008EEE /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		566A4D5C2B20F7CE00008EEE /* AboutMeBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeBaseViewModel.swift; sourceTree = "<group>"; };
 		566A4D622B21046400008EEE /* AboutMeSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeSheetViewModel.swift; sourceTree = "<group>"; };
@@ -111,6 +122,7 @@
 		569A07B72B202969004AA63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569A07B92B202CE5004AA63A /* AssetColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetColor.swift; sourceTree = "<group>"; };
 		569A07BD2B202F69004AA63A /* ToolbarCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarCustomButton.swift; sourceTree = "<group>"; };
+		56B0C0AE2B2A67AB00D0BA90 /* SkillSectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSectionRow.swift; sourceTree = "<group>"; };
 		56E477CF2B2553EC0095F408 /* CareerGoalsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerGoalsSheetView.swift; sourceTree = "<group>"; };
 		56E477D12B2554030095F408 /* CareerGoalsSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerGoalsSheetViewModel.swift; sourceTree = "<group>"; };
 		56E575702B224E130098C9A0 /* BubbleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleRowView.swift; sourceTree = "<group>"; };
@@ -150,6 +162,51 @@
 			path = Auxiliar;
 			sourceTree = "<group>";
 		};
+		56348ADC2B2A2A5F002EFBD3 /* SheetView */ = {
+			isa = PBXGroup;
+			children = (
+				56348ADD2B2A2A6B002EFBD3 /* ViewModel */,
+				56348ADE2B2A2A71002EFBD3 /* View */,
+			);
+			path = SheetView;
+			sourceTree = "<group>";
+		};
+		56348ADD2B2A2A6B002EFBD3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				56348ADF2B2A2A84002EFBD3 /* EducationSheetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56348ADE2B2A2A71002EFBD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56348AE12B2A2A94002EFBD3 /* EducationSheetView.swift */,
+				56348AE62B2A3E80002EFBD3 /* Sections */,
+				56348AE32B2A3C8A002EFBD3 /* Rows */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56348AE32B2A3C8A002EFBD3 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				56348AE72B2A3EB2002EFBD3 /* EducationRowView.swift */,
+				56348AE92B2A5DD3002EFBD3 /* CertificateRowView.swift */,
+				56B0C0AE2B2A67AB00D0BA90 /* SkillSectionRow.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
+		56348AE62B2A3E80002EFBD3 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				56348AE42B2A3CA5002EFBD3 /* SectionView.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
 		566A4D5E2B2101BB00008EEE /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +227,8 @@
 		566A4D602B21044700008EEE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				56E5756F2B224DE50098C9A0 /* Rows */,
 				566A4D642B21046E00008EEE /* AboutMeSheetView.swift */,
+				56E5756F2B224DE50098C9A0 /* Rows */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,6 +287,7 @@
 		569309382B243BBE00C84DE8 /* Education */ = {
 			isa = PBXGroup;
 			children = (
+				56348ADC2B2A2A5F002EFBD3 /* SheetView */,
 				5693093B2B243C0000C84DE8 /* BaseView */,
 			);
 			path = Education;
@@ -682,12 +740,16 @@
 				569A078D2B20061D004AA63A /* BaseTabViewModel.swift in Sources */,
 				569309432B243C5400C84DE8 /* PassionBaseViewModel.swift in Sources */,
 				569A07512B1FD23D004AA63A /* TabBackgroundView.swift in Sources */,
+				56348AE22B2A2A94002EFBD3 /* EducationSheetView.swift in Sources */,
 				566A4D652B21046E00008EEE /* AboutMeSheetView.swift in Sources */,
 				569A07BA2B202CE5004AA63A /* AssetColor.swift in Sources */,
 				566A4D632B21046400008EEE /* AboutMeSheetViewModel.swift in Sources */,
 				561E34A42B27E05A004BAA08 /* BubbleView.swift in Sources */,
+				56348AE82B2A3EB2002EFBD3 /* EducationRowView.swift in Sources */,
 				566A4D5B2B20DD6B00008EEE /* TabBarButton.swift in Sources */,
 				569A07B62B20294E004AA63A /* Font.swift in Sources */,
+				56348AE02B2A2A84002EFBD3 /* EducationSheetViewModel.swift in Sources */,
+				56348AE52B2A3CA5002EFBD3 /* SectionView.swift in Sources */,
 				569A079C2B20163D004AA63A /* TabView+Extension.swift in Sources */,
 				56E477D02B2553EC0095F408 /* CareerGoalsSheetView.swift in Sources */,
 				566A4D5D2B20F7CE00008EEE /* AboutMeBaseViewModel.swift in Sources */,
@@ -701,7 +763,9 @@
 				569A074F2B1FD23D004AA63A /* RuytheriOSDevApp.swift in Sources */,
 				569A07932B200924004AA63A /* SceneDelegate.swift in Sources */,
 				569309352B24331900C84DE8 /* CareerGoalsBaseViewModel.swift in Sources */,
+				56348AEA2B2A5DD3002EFBD3 /* CertificateRowView.swift in Sources */,
 				56E477D22B2554030095F408 /* CareerGoalsSheetViewModel.swift in Sources */,
+				56B0C0AF2B2A67AB00D0BA90 /* SkillSectionRow.swift in Sources */,
 				56E575732B224F420098C9A0 /* LanguageRowView.swift in Sources */,
 				569A07BE2B202F69004AA63A /* ToolbarCustomButton.swift in Sources */,
 				569A07962B2009A3004AA63A /* CustomTabView.swift in Sources */,

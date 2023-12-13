@@ -31,6 +31,8 @@ struct BaseTabView: View {
     private let careerGoalsSheetViewModel = CareerGoalsSheetViewModel()
     private let careerGoalsTabViewModel = CareerGoalsBaseViewModel()
 
+    // Education ViewModels
+    private let educationSheetViewModel = EducationSheetViewModel()
     private let educationBaseViewModel = EducationBaseViewModel()
 
     private let experienceBaseViewModel = ExperienceBaseViewModel()
@@ -122,7 +124,7 @@ extension BaseTabView {
                             topBubbleAnimated: $topBubbleAnimated
                         )
                     case .education:
-                        Text("education") // TODO
+                        EducationSheetView(viewModel: educationSheetViewModel)
                     case .experience:
                         Text("experience") // TODO
                     case .passions:
