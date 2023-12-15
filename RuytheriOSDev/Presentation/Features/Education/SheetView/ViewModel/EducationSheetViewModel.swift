@@ -97,17 +97,16 @@ extension EducationSheetViewModel {
                 skillList: [
                     Skill(title: "Swift", skillLevel: .advanced),
                     Skill(title: "MMVM-C", skillLevel: .advanced),
-                    Skill(title: "Scrum", skillLevel: .advanced),
+                    Skill(title: "Scrum", skillLevel: .intermediate),
                     Skill(title: "Rest API Intergration", skillLevel: .advanced),
                     Skill(title: "UIKit", skillLevel: .intermediate),
-                    Skill(title: "SwiftUI", skillLevel: .elementary),
+                    Skill(title: "SwiftUI", skillLevel: .basic),
                     Skill(title: "iOS Animation", skillLevel: .elementary),
-                    Skill(title: "iOS Animation", skillLevel: .intermediate),
                     Skill(title: "Cocoapods", skillLevel: .intermediate),
                     Skill(title: "SPM", skillLevel: .intermediate),
                     Skill(title: "Git", skillLevel: .intermediate),
-                    Skill(title: "UI/UX Designer", skillLevel: .intermediate),
-                    Skill(title: "Mobile Usability", skillLevel: .advanced),
+                    Skill(title: "UI Design", skillLevel: .basic),
+                    Skill(title: "Mobile Usability (UX)", skillLevel: .advanced),
                 ]
             ))
         ]

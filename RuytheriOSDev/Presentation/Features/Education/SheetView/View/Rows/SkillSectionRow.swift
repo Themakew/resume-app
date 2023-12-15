@@ -16,16 +16,14 @@ struct SkillSectionRow: View {
                 getRowItemView(data)
             }
         }
+        .padding()
         .background {
-            Rectangle()
-                .cornerRadius(15)
-                .foregroundStyle(AssetColor.whiteBackground.color)
-                .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 0)
-                .padding([.top, .bottom], -16)
+           BubbleBackgroundView()
         }
         .padding([.leading, .trailing])
     }
 
+    @ViewBuilder
     func getRowItemView(_ data: EducationSheetViewModel.Skill) -> some View {
         HStack(spacing: 20) {
             HStack {
@@ -41,7 +39,7 @@ struct SkillSectionRow: View {
             }
         }
     }
-}
+}gi
 
 #Preview {
     SkillSectionRow(rowList: [

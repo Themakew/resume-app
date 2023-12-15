@@ -35,6 +35,8 @@ struct BaseTabView: View {
     private let educationSheetViewModel = EducationSheetViewModel()
     private let educationBaseViewModel = EducationBaseViewModel()
 
+    // Experience ViewModels
+    private let experienceSheetViewModel = ExperienceSheetViewModel()
     private let experienceBaseViewModel = ExperienceBaseViewModel()
 
     private let passionBaseViewModel = PassionBaseViewModel()
@@ -126,7 +128,7 @@ extension BaseTabView {
                     case .education:
                         EducationSheetView(viewModel: educationSheetViewModel)
                     case .experience:
-                        Text("experience") // TODO
+                        ExperienceSheetView(viewModel: experienceSheetViewModel)
                     case .passions:
                         Text("passions") // TODO
                     }

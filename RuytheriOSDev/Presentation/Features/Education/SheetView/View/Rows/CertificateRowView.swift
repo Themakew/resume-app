@@ -20,6 +20,7 @@ struct CertificateRowView: View {
         .padding([.leading, .trailing], 24)
     }
 
+    @ViewBuilder
     func getRowItemView(_ data: EducationSheetViewModel.CertificateRow) -> some View {
         VStack(spacing: 0) {
             Text(data.title)

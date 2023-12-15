@@ -28,13 +28,14 @@ struct EducationRowView: View {
         .padding(.bottom)
     }
 
+    @ViewBuilder
     func getRowItemView(_ title: String) -> some View {
         HStack {
             Circle()
                 .frame(width: 5, height: 5)
                 .foregroundStyle(AssetColor.blackLabels.color)
             Text(title)
-                .font(NunitoFont.semiBold.size(12))
+                .font(NunitoFont.semiBold.size(13))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundStyle(AssetColor.grayLabels.color)
         }
