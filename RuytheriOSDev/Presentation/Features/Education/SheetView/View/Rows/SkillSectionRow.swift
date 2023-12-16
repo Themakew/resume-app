@@ -39,7 +39,7 @@ struct SkillSectionRow: View {
             }
         }
     }
-}gi
+}
 
 #Preview {
     SkillSectionRow(rowList: [

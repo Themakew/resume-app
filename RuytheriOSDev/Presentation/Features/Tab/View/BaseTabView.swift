@@ -39,6 +39,8 @@ struct BaseTabView: View {
     private let experienceSheetViewModel = ExperienceSheetViewModel()
     private let experienceBaseViewModel = ExperienceBaseViewModel()
 
+    // Passion ViewModels
+    private let passionSheetViewModel = PassionSheetViewModel()
     private let passionBaseViewModel = PassionBaseViewModel()
 
     // MARK: - SwiftUI Body
@@ -112,28 +114,40 @@ extension BaseTabView {
     @ViewBuilder
     private var sheetView: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 15) {
-                    switch viewModel.activeTab {
-                    case .aboutMe:
+            VStack(spacing: 15) {
+                switch viewModel.activeTab {
+                case .aboutMe:
+                    ScrollView {
                         AboutMeSheetView(viewModel: aboutMeSheetViewModel)
-                    case .careerGoals:
+                    }
+                    .padding(.bottom, 50)
+                case .careerGoals:
+                    ScrollView {
                         CareerGoalsSheetView(
                             isToAnimate: isToAnimateBinding,
-                            viewModel: careerGoalsSheetViewModel, 
+                            viewModel: careerGoalsSheetViewModel,
                             bottomBubbleAnimated: $bottomBubbleAnimated,
                             middleBubbleAnimated: $middleBubbleAnimated,
                             topBubbleAnimated: $topBubbleAnimated
                         )
-                    case .education:
-                        EducationSheetView(viewModel: educationSheetViewModel)
-                    case .experience:
-                        ExperienceSheetView(viewModel: experienceSheetViewModel)
-                    case .passions:
-                        Text("passions") // TODO
                     }
+                    .padding(.bottom, 50)
+                case .education:
+                    ScrollView {
+                        EducationSheetView(viewModel: educationSheetViewModel)
+                    }
+                    .padding(.bottom, 50)
+                case .experience:
+                    ScrollView {
+                        ExperienceSheetView(viewModel: experienceSheetViewModel)
+                    }
+                    .padding(.bottom, 50)
+                case .passions:
+                    ScrollView {
+                        PassionSheetView(viewModel: passionSheetViewModel)
+                    }
+                    .padding(.bottom, 50)
                 }
-                .padding(.bottom, 50)
             }
             .scrollIndicators(.hidden)
             .scrollContentBackground(.hidden)
