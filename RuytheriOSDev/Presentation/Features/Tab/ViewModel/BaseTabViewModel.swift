@@ -71,7 +71,7 @@ protocol BaseTabViewModelProtocol {
     let customToolbarTitle = "Hire me"
 
     var activeTab: Tab = .aboutMe
-    var selectedDetent = PresentationDetent.height(100)
+    var selectedDetent = PresentationDetent.height(110)
 
     private var lastActiveTab: Tab = .aboutMe
     private var sheetStatusByTab: [Tab: PresentationDetent] = [
