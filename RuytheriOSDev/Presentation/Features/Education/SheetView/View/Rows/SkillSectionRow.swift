@@ -12,7 +12,7 @@ struct SkillSectionRow: View {
 
     var body: some View {
         VStack {
-            ForEach(Array(rowList.enumerated()), id: \.element) { _, data in
+            ForEach(rowList) { data in
                 getRowItemView(data)
             }
         }
@@ -23,7 +23,6 @@ struct SkillSectionRow: View {
         .padding([.leading, .trailing])
     }
 
-    @ViewBuilder
     func getRowItemView(_ data: EducationSheetViewModel.Skill) -> some View {
         HStack(spacing: 20) {
             HStack {

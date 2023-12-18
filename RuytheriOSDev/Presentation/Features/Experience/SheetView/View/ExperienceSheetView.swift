@@ -12,7 +12,7 @@ struct ExperienceSheetView<ViewModel: ExperienceSheetViewModelProtocol>: View {
 
     var body: some View {
         VStack(spacing: 24) {
-            ForEach(Array(viewModel.screenData.enumerated()), id: \.element) { _, itemData in
+            ForEach(viewModel.screenData) { itemData in
                 ExperienceRowView(data: itemData)
             }
         }

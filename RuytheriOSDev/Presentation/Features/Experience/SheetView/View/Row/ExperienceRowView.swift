@@ -24,7 +24,6 @@ struct ExperienceRowView: View {
         .padding([.leading, .trailing])
     }
 
-    @ViewBuilder
     private func getCustomProgressView() -> some View {
         HStack(alignment: .center) {
             GeometryReader { geometry in
@@ -39,7 +38,6 @@ struct ExperienceRowView: View {
         }
     }
 
-    @ViewBuilder
     private func getExperienceDetailView() -> some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(data.title)
@@ -64,7 +62,6 @@ struct ExperienceRowView: View {
         .padding(.leading, 35)
     }
 
-    @ViewBuilder
     func getRowItemView(_ title: String) -> some View {
         HStack(alignment: .top) {
             Circle()

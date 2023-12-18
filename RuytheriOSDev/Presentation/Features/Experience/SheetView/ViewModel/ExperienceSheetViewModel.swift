@@ -16,7 +16,8 @@ protocol ExperienceSheetViewModelProtocol {
 @Observable final class ExperienceSheetViewModel: ExperienceSheetViewModelProtocol {
     var screenData = [Item]()
 
-    struct Item: Hashable {
+    struct Item: Identifiable {
+        let id = UUID()
         var title: String
         let subtitle: String
         let bulletPoints: [String]

@@ -12,7 +12,7 @@ struct CertificateRowView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            ForEach(Array(rowList.enumerated()), id: \.element) { _, data in
+            ForEach(rowList) { data in
                 getRowItemView(data)
                     .padding(.bottom)
             }
@@ -20,7 +20,6 @@ struct CertificateRowView: View {
         .padding([.leading, .trailing], 24)
     }
 
-    @ViewBuilder
     func getRowItemView(_ data: EducationSheetViewModel.CertificateRow) -> some View {
         VStack(spacing: 0) {
             Text(data.title)

@@ -16,19 +16,25 @@ protocol AboutMeSheetViewModelProtocol {
 @Observable final class AboutMeSheetViewModel: AboutMeSheetViewModelProtocol {
     var screenData = [ListItem]()
 
-    enum ListItem: Hashable {
+    enum ListItem: Identifiable {
         case bubble(BubbleData)
         case language(LanguageData)
         case location(LocationData)
+
+        var id: UUID {
+            return UUID()
+        }
     }
 
-    struct BubbleData: Hashable {
+    struct BubbleData: Identifiable {
+        let id = UUID()
         let title: String
         let description: String
         let expandedBuble: Bool
     }
 
-    struct LanguageData: Hashable {
+    struct LanguageData: Identifiable {
+        let id = UUID()
         let title: String
         let firstLanguageTitle: String
         let firstLanguageValue: Double
@@ -36,11 +42,14 @@ protocol AboutMeSheetViewModelProtocol {
         let secondLanguageValue: Double
     }
 
-    struct LocationData: Hashable {
+    struct LocationData: Identifiable {
+        let id = UUID()
         let title: String
         let location: String
     }
+}
 
+extension AboutMeSheetViewModel {
     func fetchData() {
         screenData = [
             .bubble(

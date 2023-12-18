@@ -12,7 +12,7 @@ struct EducationSheetView<ViewModel: EducationSheetViewModelProtocol>: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(Array(viewModel.screenData.enumerated()), id: \.element) { _, section in
+            ForEach(viewModel.screenData) { section in
                 switch section {
                 case let .educationSection(data):
                     VStack(spacing: 0) {
@@ -25,7 +25,7 @@ struct EducationSheetView<ViewModel: EducationSheetViewModelProtocol>: View {
                         CertificateRowView(rowList: data.sectionRows)
                     }
                 case let .skillSection(data):
-                    VStack(spacing: 16) {
+                    VStack(spacing: 0) {
                         SectionView(titleText: data.title)
                         SkillSectionRow(rowList: data.skillList)
                     }

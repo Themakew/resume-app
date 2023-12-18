@@ -128,6 +128,12 @@ struct CareerGoalsSheetView<ViewModel: CareerGoalsSheetViewModelProtocol>: View 
     }
 }
 
-//#Preview {
-//    CareerGoalsSheetView(isToAnimate: .constant(true), viewModel: CareerGoalsSheetViewModel())
-//}
+#Preview {
+    CareerGoalsSheetView(
+        isToAnimate: .constant(true),
+        viewModel: CareerGoalsSheetViewModel(),
+        bottomBubbleAnimated: .constant(true),
+        middleBubbleAnimated: .constant(true),
+        topBubbleAnimated: .constant(true)
+    )
+}

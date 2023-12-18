@@ -12,7 +12,7 @@ struct AboutMeSheetView<ViewModel: AboutMeSheetViewModelProtocol>: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(Array(viewModel.screenData.enumerated()), id: \.element) { _, item in
+            ForEach(viewModel.screenData) { item in
                 switch item {
                 case let .bubble(bubbleData):
                     BubbleRowView(bubbleData: bubbleData)

@@ -53,7 +53,6 @@ struct TabBackgroundView<ViewModel: TabBackgroundViewModelProtocol>: View {
         .tag(viewModel.tabType)
     }
 
-    @ViewBuilder
     private var topView: some View {
         HStack {
             Spacer()
@@ -70,7 +69,6 @@ struct TabBackgroundView<ViewModel: TabBackgroundViewModelProtocol>: View {
         .padding()
     }
 
-    @ViewBuilder
     private var labelsView: some View {
         VStack(alignment: .leading) {
             HStack {

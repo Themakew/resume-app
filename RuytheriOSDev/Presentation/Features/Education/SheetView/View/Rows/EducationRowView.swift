@@ -12,7 +12,7 @@ struct EducationRowView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            ForEach(Array(rowList.enumerated()), id: \.element) { _, data in
+            ForEach(rowList) { data in
                 Text(data.title)
                     .font(NunitoFont.bold.size(18))
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -28,7 +28,6 @@ struct EducationRowView: View {
         .padding(.bottom)
     }
 
-    @ViewBuilder
     func getRowItemView(_ title: String) -> some View {
         HStack {
             Circle()

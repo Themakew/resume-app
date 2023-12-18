@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension TabView {
-    @ViewBuilder
     func tabSheet<SheetContent: View>(
         sheetYOffsetValue: Binding<CGFloat>,
         selectedDetent: Binding<PresentationDetent>,
@@ -67,7 +66,6 @@ fileprivate struct BottomSheetModifier<SheetContent: View>: ViewModifier {
             })
     }
 
-    @ViewBuilder
     private var backgroundGradient: some View {
         Rectangle()
             .fill(gradient)

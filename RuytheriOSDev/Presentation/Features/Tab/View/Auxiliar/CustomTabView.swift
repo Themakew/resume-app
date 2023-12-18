@@ -23,7 +23,6 @@ struct CustomTabView: View {
 
     // MARK: - Tab Bar View
 
-    @ViewBuilder
     private func tabBarView(geometry: GeometryProxy) -> some View {
         ZStack(alignment: .topLeading) {
             tabBarButtonsView()
@@ -33,7 +32,6 @@ struct CustomTabView: View {
 
     // MARK: - Tab Bar Buttons
 
-    @ViewBuilder
     private func tabBarButtonsView() -> some View {
         HStack(spacing: 0) {
             ForEach(Tab.allCases, id: \.self) { tab in
@@ -46,7 +44,6 @@ struct CustomTabView: View {
 
     // MARK: - Highlight Line
 
-    @ViewBuilder
     private func highlightLineView(geometry: GeometryProxy) -> some View {
         Rectangle()
             .fill(Color.orange)

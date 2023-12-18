@@ -17,44 +17,54 @@ protocol EducationSheetViewModelProtocol {
     var screenData = [Sections]()
 
     // Sections
-    enum Sections: Hashable {
+    enum Sections: Identifiable {
         case educationSection(ListingSection)
         case certificateSection(CertificateSection)
         case skillSection(BubbleSection)
+
+        var id: UUID {
+            return UUID()
+        }
     }
 
-    struct ListingSection: Hashable {
+    struct ListingSection: Identifiable {
+        let id = UUID()
         var imageName: String?
         let title: String
         let sectionRows: [EducationRow]
     }
 
-    struct CertificateSection: Hashable {
+    struct CertificateSection: Identifiable {
+        let id = UUID()
         var imageName: String?
         let title: String
         let sectionRows: [CertificateRow]
     }
 
-    struct BubbleSection: Hashable {
+    struct BubbleSection: Identifiable {
+        let id = UUID()
         let title: String
         let skillList: [Skill]
     }
 
     // Education definition
-    struct EducationRow: Hashable {
+    struct EducationRow: Identifiable {
+        let id = UUID()
         let title: String
         let bulletPoints: [String]
     }
 
     // Certificate definition
-    struct CertificateRow: Hashable {
+    struct CertificateRow: Identifiable {
+        let id = UUID()
         let title: String
         let location: String
         let date: String
     }
 
     // Skills definition
-    struct Skill: Hashable {
+    struct Skill: Identifiable {
+        let id = UUID()
         let title: String
         let skillLevel: SkillLevel
 

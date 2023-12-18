@@ -15,7 +15,6 @@ enum DeviceType {
 }
 
 extension View {
-    @ViewBuilder
     func hideNativeTabBar() -> some View {
         self.toolbar(.hidden, for: .tabBar)
     }

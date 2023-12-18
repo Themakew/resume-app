@@ -37,7 +37,6 @@ struct LanguageRowView: View {
         }
     }
 
-    @ViewBuilder
     private func getLanguageDetailRowView(title: String, progressRange: Double) -> some View {
         VStack(spacing: 4) {
             Text(title)
@@ -49,7 +48,6 @@ struct LanguageRowView: View {
         }
     }
 
-    @ViewBuilder
     private func getCustomProgressView(progressRange: Double) -> some View {
         ZStack {
             Capsule()

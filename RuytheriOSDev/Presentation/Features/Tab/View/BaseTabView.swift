@@ -111,7 +111,6 @@ extension BaseTabView {
         )
     }
 
-    @ViewBuilder
     private var sheetView: some View {
         NavigationStack {
             VStack(spacing: 15) {
