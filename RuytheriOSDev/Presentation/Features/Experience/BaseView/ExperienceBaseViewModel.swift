@@ -13,8 +13,15 @@ import Foundation
     var secondTitleText = "Experience"
     var backgroundPhotoName = "office"
     var tabType: Tab = .experience
+    var hireContextMenuItem = [ContactUseCase.MenuItem]()
 
-    func hireMeAction() {
-        // TODO
+    private let contactUseCase: ContactUseCaseProtocol
+
+    init(contactUseCase: ContactUseCaseProtocol) {
+        self.contactUseCase = contactUseCase
+    }
+
+    func fetchData() {
+        hireContextMenuItem = contactUseCase.fetchData()
     }
 }

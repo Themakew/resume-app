@@ -58,6 +58,8 @@
 		56B0C0BC2B2CC32100D0BA90 /* BubbleBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B0C0BB2B2CC32100D0BA90 /* BubbleBackgroundView.swift */; };
 		56B0C0C12B2CEE4800D0BA90 /* PassionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B0C0C02B2CEE4800D0BA90 /* PassionSheetViewModel.swift */; };
 		56B0C0C32B2CEE5500D0BA90 /* PassionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B0C0C22B2CEE5500D0BA90 /* PassionSheetView.swift */; };
+		56D2E3AD2B3219B90087B15B /* ContactUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2E3AC2B3219B90087B15B /* ContactUseCase.swift */; };
+		56D2E3B02B321DB80087B15B /* ContactEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2E3AF2B321DB80087B15B /* ContactEntity.swift */; };
 		56E477D02B2553EC0095F408 /* CareerGoalsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E477CF2B2553EC0095F408 /* CareerGoalsSheetView.swift */; };
 		56E477D22B2554030095F408 /* CareerGoalsSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E477D12B2554030095F408 /* CareerGoalsSheetViewModel.swift */; };
 		56E575712B224E130098C9A0 /* BubbleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E575702B224E130098C9A0 /* BubbleRowView.swift */; };
@@ -137,6 +139,8 @@
 		56B0C0BB2B2CC32100D0BA90 /* BubbleBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleBackgroundView.swift; sourceTree = "<group>"; };
 		56B0C0C02B2CEE4800D0BA90 /* PassionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassionSheetViewModel.swift; sourceTree = "<group>"; };
 		56B0C0C22B2CEE5500D0BA90 /* PassionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassionSheetView.swift; sourceTree = "<group>"; };
+		56D2E3AC2B3219B90087B15B /* ContactUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUseCase.swift; sourceTree = "<group>"; };
+		56D2E3AF2B321DB80087B15B /* ContactEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEntity.swift; sourceTree = "<group>"; };
 		56E477CF2B2553EC0095F408 /* CareerGoalsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerGoalsSheetView.swift; sourceTree = "<group>"; };
 		56E477D12B2554030095F408 /* CareerGoalsSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerGoalsSheetViewModel.swift; sourceTree = "<group>"; };
 		56E575702B224E130098C9A0 /* BubbleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleRowView.swift; sourceTree = "<group>"; };
@@ -383,6 +387,7 @@
 				569A07782B200384004AA63A /* App */,
 				569A07822B2004E1004AA63A /* Infrastructure */,
 				569A07832B200514004AA63A /* Data */,
+				56D2E3AA2B3219A10087B15B /* Domain */,
 				569A07842B20051C004AA63A /* Presentation */,
 				569A07792B200395004AA63A /* Resources */,
 				569A07542B1FD23E004AA63A /* Preview Content */,
@@ -679,6 +684,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		56D2E3AA2B3219A10087B15B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				56D2E3AE2B321DA60087B15B /* Entity */,
+				56D2E3AB2B3219A90087B15B /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		56D2E3AB2B3219A90087B15B /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				56D2E3AC2B3219B90087B15B /* ContactUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		56D2E3AE2B321DA60087B15B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				56D2E3AF2B321DB80087B15B /* ContactEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		56E5756F2B224DE50098C9A0 /* Rows */ = {
 			isa = PBXGroup;
 			children = (
@@ -848,6 +878,7 @@
 				56B0C0B92B2CB90500D0BA90 /* ExperienceRowView.swift in Sources */,
 				569A079C2B20163D004AA63A /* TabView+Extension.swift in Sources */,
 				56E477D02B2553EC0095F408 /* CareerGoalsSheetView.swift in Sources */,
+				56D2E3B02B321DB80087B15B /* ContactEntity.swift in Sources */,
 				566A4D5D2B20F7CE00008EEE /* AboutMeBaseViewModel.swift in Sources */,
 				56E575712B224E130098C9A0 /* BubbleRowView.swift in Sources */,
 				569A079A2B201624004AA63A /* View+Extension.swift in Sources */,
@@ -858,6 +889,7 @@
 				569309412B243C4600C84DE8 /* ExperienceBaseViewModel.swift in Sources */,
 				569A078B2B2005F2004AA63A /* BaseTabView.swift in Sources */,
 				569A07912B200917004AA63A /* AppDelegate.swift in Sources */,
+				56D2E3AD2B3219B90087B15B /* ContactUseCase.swift in Sources */,
 				569A074F2B1FD23D004AA63A /* RuytheriOSDevApp.swift in Sources */,
 				569A07932B200924004AA63A /* SceneDelegate.swift in Sources */,
 				56B0C0BC2B2CC32100D0BA90 /* BubbleBackgroundView.swift in Sources */,

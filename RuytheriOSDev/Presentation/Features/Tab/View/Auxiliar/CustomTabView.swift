@@ -72,5 +72,5 @@ struct CustomTabView: View {
 }
 
 #Preview {
-    CustomTabView(viewModel: .constant(BaseTabViewModel()))
+    CustomTabView(viewModel: .constant(BaseTabViewModel(contactUseCase: ContactUseCase())))
 }

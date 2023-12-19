@@ -9,19 +9,39 @@ import SwiftUI
 
 struct ToolbarCustomButton: View {
     @State private var scale: CGFloat = 1.0
+    @Binding var menuItems: [ContactUseCase.MenuItem]
 
     var title: String = ""
     var backgroundColor: Color = AssetColor.orangeButton.color
     var foregroundColor: Color = .white
     var fontName: String = NunitoFont.black.rawValue
     var fontSize: CGFloat = 18
-    var action: () -> Void
 
     var body: some View {
-        Button(action: {
-            animate()
-            action()
-        }) {
+        Menu {
+            ForEach(menuItems) { item in
+                if let subMenuItems = item.subMenuItems {
+                    Menu {
+                        ForEach(subMenuItems) { subItem in
+                            Button(subItem.title) {
+                                subItem.action?(subItem.actionType ?? .none)
+                            }
+                        }
+                    } label: {
+                        Image(item.icon ?? "")
+                            .renderingMode(.template)
+                            .foregroundColor(AssetColor.blackLabels.color)
+                        Text(item.title)
+                            .font(NunitoFont.semiBold.size(11))
+                            .foregroundColor(AssetColor.blackLabels.color)
+                    }
+                } else {
+                    if let url = item.link {
+                        Link(item.title, destination: url)
+                    }
+                }
+            }
+        } label: {
             Text(title)
                 .font(.custom(fontName, size: fontSize))
                 .padding(.vertical, 5)
@@ -30,25 +50,10 @@ struct ToolbarCustomButton: View {
                 .background(backgroundColor)
                 .cornerRadius(25)
         }
-        .buttonStyle(PlainButtonStyle())
         .scaleEffect(scale)
-    }
-
-    private func animate() {
-        // Trigger the initial scale down to 0.9
-        withAnimation(.spring(response: 0.1, dampingFraction: 0.3, blendDuration: 0)) {
-            scale = 0.9
-        }
-
-        // Delay the execution of the second animation to scale back to 1
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.3, blendDuration: 0)) {
-                scale = 1.0
-            }
-        }
     }
 }
 
 #Preview {
-    ToolbarCustomButton() {}
+    ToolbarCustomButton(menuItems: .constant([ContactUseCase.MenuItem(title: "Copy Email", icon: "callRinging")]), backgroundColor: .red)
 }

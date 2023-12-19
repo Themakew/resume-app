@@ -31,7 +31,6 @@ import SwiftUI
         // Create and configure the PassThroughWindow
         let tabWindow = PassThroughtWindow(windowScene: scene)
         tabWindow.rootViewController = tabViewController
-        tabWindow.backgroundColor = .clear
         tabWindow.isHidden = false
 
         self.tabWindow = tabWindow

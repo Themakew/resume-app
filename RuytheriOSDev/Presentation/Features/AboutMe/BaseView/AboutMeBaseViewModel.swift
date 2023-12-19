@@ -13,8 +13,15 @@ import SwiftUI
     var secondTitleText = "I am Ruyther!"
     var backgroundPhotoName = "picture"
     var tabType: Tab = .aboutMe
+    var hireContextMenuItem = [ContactUseCase.MenuItem]()
 
-    func hireMeAction() {
-        // TODO
+    private let contactUseCase: ContactUseCaseProtocol
+
+    init(contactUseCase: ContactUseCaseProtocol) {
+        self.contactUseCase = contactUseCase
+    }
+
+    func fetchData() {
+        hireContextMenuItem = contactUseCase.fetchData()
     }
 }

@@ -56,7 +56,7 @@ fileprivate struct BottomSheetModifier<SheetContent: View>: ViewModifier {
                             sheetYOffsetValue = newValue
                         }
                 }
-                .presentationDetents([.height(initialHeight), .fraction(0.99)], selection: $selectedDetent)
+                .presentationDetents([.height(initialHeight), .medium, .fraction(0.99)], selection: $selectedDetent)
                 .presentationCornerRadius(sheetCornerRadius)
                 .presentationBackgroundInteraction(.enabled(upThrough: .medium))
                 .presentationBackground(content: {

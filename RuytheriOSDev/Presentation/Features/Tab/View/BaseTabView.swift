@@ -25,23 +25,23 @@ struct BaseTabView: View {
 
     // AboutMe ViewModels
     private let aboutMeSheetViewModel = AboutMeSheetViewModel()
-    private let aboutMeTabViewModel = AboutMeBaseViewModel()
+    private let aboutMeTabViewModel = AboutMeBaseViewModel(contactUseCase: ContactUseCase())
 
     // CareerGoals ViewModels
     private let careerGoalsSheetViewModel = CareerGoalsSheetViewModel()
-    private let careerGoalsTabViewModel = CareerGoalsBaseViewModel()
+    private let careerGoalsTabViewModel = CareerGoalsBaseViewModel(contactUseCase: ContactUseCase())
 
     // Education ViewModels
     private let educationSheetViewModel = EducationSheetViewModel()
-    private let educationBaseViewModel = EducationBaseViewModel()
+    private let educationBaseViewModel = EducationBaseViewModel(contactUseCase: ContactUseCase())
 
     // Experience ViewModels
     private let experienceSheetViewModel = ExperienceSheetViewModel()
-    private let experienceBaseViewModel = ExperienceBaseViewModel()
+    private let experienceBaseViewModel = ExperienceBaseViewModel(contactUseCase: ContactUseCase())
 
     // Passion ViewModels
     private let passionSheetViewModel = PassionSheetViewModel()
-    private let passionBaseViewModel = PassionBaseViewModel()
+    private let passionBaseViewModel = PassionBaseViewModel(contactUseCase: ContactUseCase())
 
     // MARK: - SwiftUI Body
 
@@ -98,6 +98,7 @@ struct BaseTabView: View {
     private func setupTabWindow() {
         guard sceneDelegate.tabWindow == nil else { return }
         sceneDelegate.addTabView($viewModel)
+        viewModel.fetchData()
     }
 }
 
@@ -169,11 +170,9 @@ extension BaseTabView {
         }
 
         ToolbarItem(placement: .topBarTrailing) {
-            ToolbarCustomButton(title: viewModel.customToolbarTitle) {
-                // TODO
-            }
-            .opacity(sheetYOffsetValue > maximumSheetYOffsetValue ? 0 : 1)
-            .animation(sheetYOffsetValue > maximumSheetYOffsetValue ? nil : .easeInOut , value: sheetYOffsetValue > maximumSheetYOffsetValue)
+            ToolbarCustomButton(menuItems: $viewModel.hireContextMenuItem, title: viewModel.customToolbarTitle)
+                .opacity(sheetYOffsetValue > maximumSheetYOffsetValue ? 0 : 1)
+                .animation(sheetYOffsetValue > maximumSheetYOffsetValue ? nil : .easeInOut , value: sheetYOffsetValue > maximumSheetYOffsetValue)
         }
     }
 }

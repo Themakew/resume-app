@@ -13,8 +13,9 @@ protocol TabBackgroundViewModelProtocol {
     var secondTitleText: String { get }
     var backgroundPhotoName: String { get }
     var tabType: Tab { get }
+    var hireContextMenuItem: [ContactUseCase.MenuItem] { get set }
 
-    func hireMeAction()
+    func fetchData()
 }
 
 struct TabBackgroundView<ViewModel: TabBackgroundViewModelProtocol>: View {
@@ -50,6 +51,9 @@ struct TabBackgroundView<ViewModel: TabBackgroundViewModelProtocol>: View {
                 }
             }
         }
+        .onAppear {
+            viewModel.fetchData()
+        }
         .tag(viewModel.tabType)
     }
 
@@ -57,12 +61,11 @@ struct TabBackgroundView<ViewModel: TabBackgroundViewModelProtocol>: View {
         HStack {
             Spacer()
             ToolbarCustomButton(
+                menuItems: $viewModel.hireContextMenuItem,
                 title: viewModel.viewTitleText,
                 backgroundColor: AssetColor.whiteBackground.color,
                 foregroundColor: AssetColor.orangeTitle.color
-            ) {
-                // TODO
-            }
+            )
             .opacity(sheetYOffsetValue < maximumSheetYOffsetValue ? 0 : 1)
             .animation(.easeInOut, value: sheetYOffsetValue)
         }

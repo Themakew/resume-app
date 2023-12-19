@@ -64,7 +64,10 @@ protocol BaseTabViewModelProtocol {
     var activeTab: Tab { get set }
     var selectedDetent: PresentationDetent { get set }
 
+    var hireContextMenuItem: [ContactUseCase.MenuItem] { get set }
+
     func updateSheetDetentStatus()
+    func fetchData()
 }
 
 @Observable final class BaseTabViewModel: BaseTabViewModelProtocol {
@@ -72,11 +75,17 @@ protocol BaseTabViewModelProtocol {
 
     var activeTab: Tab = .aboutMe
     var selectedDetent = PresentationDetent.height(110)
+    var hireContextMenuItem = [ContactUseCase.MenuItem]()
 
+    private let contactUseCase: ContactUseCaseProtocol
     private var lastActiveTab: Tab = .aboutMe
     private var sheetStatusByTab: [Tab: PresentationDetent] = [
         .aboutMe: .height(110), .careerGoals: .height(110), .education: .height(110), .experience: .height(110), .passions: .height(110)
     ]
+
+    init(contactUseCase: ContactUseCaseProtocol) {
+        self.contactUseCase = contactUseCase
+    }
 
     func updateSheetDetentStatus() {
         sheetStatusByTab[lastActiveTab] = selectedDetent
@@ -86,5 +95,9 @@ protocol BaseTabViewModelProtocol {
         }
 
         lastActiveTab = activeTab
+    }
+
+    func fetchData() {
+        hireContextMenuItem = contactUseCase.fetchData()
     }
 }
