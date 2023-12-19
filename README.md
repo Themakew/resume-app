@@ -1,12 +1,12 @@
 # Resume App
 
 <p align="center">
+  <img src="https://github.com/Themakew/resume-app/assets/3030029/387a2f0d-648f-46ad-a1b9-bd129dfef565" alt="Simulator Screenshot - iPhone 15 Pro Max - 2023-10-10 at 17 54 42" width="200"/>
   <img src="https://github.com/Themakew/resume-app/assets/3030029/e2aee9ee-9c4b-4724-bb13-025b6de66200" alt="Simulator Screenshot - iPhone 15 Pro Max - 2023-10-10 at 17 54 33" width="200"/>
   <img src="https://github.com/Themakew/resume-app/assets/3030029/3a47ae7d-1114-4ab2-ae31-9d5c2cfe03db" alt="Simulator Screenshot - iPhone 15 Pro Max - 2023-10-10 at 17 54 42" width="200"/>
   <img src="https://github.com/Themakew/resume-app/assets/3030029/66a324cd-3144-406b-bd15-e8b552612257" alt="Simulator Screenshot - iPhone 15 Pro Max - 2023-10-10 at 17 54 33" width="200"/>
   <img src="https://github.com/Themakew/resume-app/assets/3030029/c880cf28-bbc0-4634-9b81-8c3169c31437" alt="Simulator Screenshot - iPhone 15 Pro Max - 2023-10-10 at 17 54 42" width="200"/>
   <img src="https://github.com/Themakew/resume-app/assets/3030029/ff0808ea-4a92-4de1-8b03-38180cae6c60" alt="Simulator Screenshot - iPhone 15 Pro Max - 2023-10-10 at 17 54 33" width="200"/>
-  <img src="https://github.com/Themakew/resume-app/assets/3030029/387a2f0d-648f-46ad-a1b9-bd129dfef565" alt="Simulator Screenshot - iPhone 15 Pro Max - 2023-10-10 at 17 54 42" width="200"/>
 </p>
 
 Resume is a simple app to work as a showcase of my work, using tools such as: Swift, SwiftUI and MVVM.
