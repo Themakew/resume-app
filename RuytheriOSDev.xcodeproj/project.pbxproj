@@ -60,6 +60,8 @@
 		56B0C0C32B2CEE5500D0BA90 /* PassionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B0C0C22B2CEE5500D0BA90 /* PassionSheetView.swift */; };
 		56D2E3AD2B3219B90087B15B /* ContactUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2E3AC2B3219B90087B15B /* ContactUseCase.swift */; };
 		56D2E3B02B321DB80087B15B /* ContactEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2E3AF2B321DB80087B15B /* ContactEntity.swift */; };
+		56D2E3B32B322B770087B15B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2E3B22B322B770087B15B /* SplashView.swift */; };
+		56D2E3B52B323AF30087B15B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D2E3B42B323AF30087B15B /* LaunchScreen.storyboard */; };
 		56E477D02B2553EC0095F408 /* CareerGoalsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E477CF2B2553EC0095F408 /* CareerGoalsSheetView.swift */; };
 		56E477D22B2554030095F408 /* CareerGoalsSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E477D12B2554030095F408 /* CareerGoalsSheetViewModel.swift */; };
 		56E575712B224E130098C9A0 /* BubbleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E575702B224E130098C9A0 /* BubbleRowView.swift */; };
@@ -141,6 +143,8 @@
 		56B0C0C22B2CEE5500D0BA90 /* PassionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassionSheetView.swift; sourceTree = "<group>"; };
 		56D2E3AC2B3219B90087B15B /* ContactUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUseCase.swift; sourceTree = "<group>"; };
 		56D2E3AF2B321DB80087B15B /* ContactEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEntity.swift; sourceTree = "<group>"; };
+		56D2E3B22B322B770087B15B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		56D2E3B42B323AF30087B15B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56E477CF2B2553EC0095F408 /* CareerGoalsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerGoalsSheetView.swift; sourceTree = "<group>"; };
 		56E477D12B2554030095F408 /* CareerGoalsSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerGoalsSheetViewModel.swift; sourceTree = "<group>"; };
 		56E575702B224E130098C9A0 /* BubbleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleRowView.swift; sourceTree = "<group>"; };
@@ -423,9 +427,11 @@
 		569A07782B200384004AA63A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				56D2E3B42B323AF30087B15B /* LaunchScreen.storyboard */,
 				569A074E2B1FD23D004AA63A /* RuytheriOSDevApp.swift */,
 				569A07B72B202969004AA63A /* Info.plist */,
 				569A078E2B2008FF004AA63A /* Delegates */,
+				56D2E3B12B322B650087B15B /* SplashView */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -709,6 +715,14 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		56D2E3B12B322B650087B15B /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				56D2E3B22B322B770087B15B /* SplashView.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
 		56E5756F2B224DE50098C9A0 /* Rows */ = {
 			isa = PBXGroup;
 			children = (
@@ -834,6 +848,7 @@
 				569A07532B1FD23E004AA63A /* Assets.xcassets in Resources */,
 				569A07B32B202924004AA63A /* Nunito-Black.ttf in Resources */,
 				569A07AC2B202924004AA63A /* Nunito-Bold.ttf in Resources */,
+				56D2E3B52B323AF30087B15B /* LaunchScreen.storyboard in Resources */,
 				569A077F2B2003E7004AA63A /* pop-up.wav in Resources */,
 				569A07AF2B202924004AA63A /* Nunito-Medium.ttf in Resources */,
 			);
@@ -901,6 +916,7 @@
 				56E575732B224F420098C9A0 /* LanguageRowView.swift in Sources */,
 				569A07BE2B202F69004AA63A /* ToolbarCustomButton.swift in Sources */,
 				569A07962B2009A3004AA63A /* CustomTabView.swift in Sources */,
+				56D2E3B32B322B770087B15B /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,11 +1084,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RuytheriOSDev/App/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = RuytheriOSDev;
+				INFOPLIST_KEY_CFBundleDisplayName = RuytherIOSDev;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1103,11 +1120,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RuytheriOSDev/App/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = RuytheriOSDev;
+				INFOPLIST_KEY_CFBundleDisplayName = RuytherIOSDev;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (

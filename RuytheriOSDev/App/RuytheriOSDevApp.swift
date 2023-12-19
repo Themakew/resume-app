@@ -11,10 +11,9 @@ import SwiftUI
 struct RuytheriOSDevApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var delegate
 
-    let parentViewModel = BaseTabViewModel(contactUseCase: ContactUseCase())
     var body: some Scene {
         WindowGroup {
-            BaseTabView(viewModel: parentViewModel)
+            SplashView()
         }
     }
 }

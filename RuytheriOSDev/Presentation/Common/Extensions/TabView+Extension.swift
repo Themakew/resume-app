@@ -46,6 +46,12 @@ fileprivate struct BottomSheetModifier<SheetContent: View>: ViewModifier {
     var sheetCornerRadius: CGFloat
     var sheetView: SheetContent
 
+    private var backgroundGradient: some View {
+        Rectangle()
+            .fill(gradient)
+            .edgesIgnoringSafeArea(.all)
+    }
+
     func body(content: Content) -> some View {
         content
             .sheet(isPresented: $showSheet, content: {
@@ -64,11 +70,5 @@ fileprivate struct BottomSheetModifier<SheetContent: View>: ViewModifier {
                 })
                 .interactiveDismissDisabled()
             })
-    }
-
-    private var backgroundGradient: some View {
-        Rectangle()
-            .fill(gradient)
-            .edgesIgnoringSafeArea(.all)
     }
 }
