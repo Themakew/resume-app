@@ -11,7 +11,7 @@
 
 Resume is a simple app to work as a showcase of my work, using tools such as: Swift, SwiftUI and MVVM.
 
-This app is almost exactly replica of Caio Resume Ppp (<a href="https://github.com/caiiocasttro/CAIOSDEV-APP">Repo</a></p>), the main ideia here was to rebuild the app using 100% SwiftUI.
+This app is almost exactly replica of Caio Resume App: <a href="https://github.com/caiiocasttro/CAIOSDEV-APP">Repo</a></p>), the main ideia here was to rebuild the app using 100% SwiftUI.
 
 ## Functionalities
 ✔️ Show skill details on each tab using a sheet view (<a href="https://www.youtube.com/watch?v=8Ys83qvnDvE&t=754s">link</a></p> to the video that I used as base).
